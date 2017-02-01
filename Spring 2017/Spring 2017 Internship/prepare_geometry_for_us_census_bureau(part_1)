@@ -1,0 +1,50 @@
+curl 'http://www2.census.gov/geo/tiger/GENZ2014/shp/cb_2014_06_tract_500k.zip' -o cb_2014_06_tract_500k.zip
+
+
+"This downloads state and polygons of census data _06_ represent state, new york is _36_"
+
+
+
+
+
+unzip -o cb_2014_06_tract_500k.zip
+
+
+"unzips zip file into current directory"
+
+
+
+shp2json cb_2014_06_tract_500k.shp -o ca.json
+
+
+
+"converts .shp file so it can be used as a GeoJSon"
+
+
+
+geoproject 'd3.geoConicEqualArea().parallels([34, 40.5]).rotate([120, 0]).fitSize([960, 960], d)' < ca.json > ca-albers.json
+
+
+ "d3.geoConicEqualArea() shows you California if you do not know what projection to use go to spatialreference.org."
+
+
+
+
+
+
+fitSize([960, 960], d) 
+
+"
+allows you to take input geometry (d) and fit in inside the box appropriately
+
+"
+
+
+geo2svg -w 960 -h 960 < ca-albers.json > ca-albers.svg
+
+
+
+"To look at it but you have to open the .svg file"
+
+
+
