@@ -1,3 +1,10 @@
+need
+d3
+d3-geo-projection
+shapefile
+topojson
+ndjson-cli
+
 curl 'http://www2.census.gov/geo/tiger/GENZ2014/shp/cb_2014_06_tract_500k.zip' -o cb_2014_06_tract_500k.zip
 
 
@@ -27,11 +34,7 @@ geoproject 'd3.geoConicEqualArea().parallels([34, 40.5]).rotate([120, 0]).fitSiz
 
  "d3.geoConicEqualArea() shows you California if you do not know what projection to use go to spatialreference.org."
 
-
-
-
-
-
+	
 fitSize([960, 960], d) 
 
 "
@@ -42,9 +45,122 @@ allows you to take input geometry (d) and fit in inside the box appropriately
 
 geo2svg -w 960 -h 960 < ca-albers.json > ca-albers.svg
 
-
-
 "To look at it but you have to open the .svg file"
+
+
+ndjson-split 'd.features' \
+  < ca-albers.json \
+  > ca-albers.ndjson
+
+"So you can edit the polygons"
+
+
+ndjson-map 'd.id = d.properties.GEOID.slice(2), d' \
+  < ca-albers.ndjson \
+  > ca-albers-id.ndjson
+
+"So you can access every individual polygon"
+
+
+curl 'http://api.census.gov/data/2014/acs5?get=B01003_001E&for=tract:*&in=state:06'
+
+"for, what type of data you are getting
+in, what place (state,region, country)"
+
+
+ndjson-cat cb_2014_06_tract_B01003.json \
+  | ndjson-split 'd.slice(1)' \
+  | ndjson-map '{id: d[2] + d[3], B01003: +d[0]}' \
+  > cb_2014_06_tract_B01003.ndjson
+
+"To use as nd-json stream"
+
+
+ndjson-join 'd.id' \
+  ca-albers-id.ndjson \
+  cb_2014_06_tract_B01003.ndjson \
+  > ca-albers-join.ndjson
+
+"To convert array values into map"
+
+
+ndjson-map 'd[0].properties = {density:Math.floor(d[1].B01003 / d[0].properties.ALAND * 2589975.2356)}, d[0]' \
+  < ca-albers-join.ndjson \
+  > ca-albers-density.ndjson
+
+"To compute the population density using ndjson-map, and to remove the additional properties we no longer need:"
+"The population density is computed as the population estimate B01003 divided by the land area ALAND. The constant 2589975.2356 = 1609.34² converts the land area from square meters to square miles."
+
+
+ndjson-reduce 'p.features.push(d), p' '{type: "FeatureCollection", features: []}' \
+  < ca-albers-density.ndjson \
+  > ca-albers-density.json
+
+ndjson-reduce \
+  < ca-albers-density.ndjson \
+  | ndjson-map '{type: "FeatureCollection", features: d}' \
+  > ca-albers-density.json
+
+"To convert back to GeoJSON, use ndjson-reduce or reduce and map"
+
+
+ndjson-map -r d3 \
+  '(d.properties.fill = d3.scaleSequential(d3.interpolateViridis).domain([0, 4000])(d.properties.density), d)' \
+  < ca-albers-density.ndjson \
+  > ca-albers-color.ndjson
+
+"Next use ndjson-map, requiring D3 via -r d3, and defining a fill property using a sequential scale with the Viridis color scheme:"
+
+
+geo2svg -n --stroke none -p 1 -w 960 -h 960 \
+  < ca-albers-color.ndjson \
+  > ca-albers-color.svg
+
+"To convert the newline-delimited GeoJSON to SVG using geo2svg: .svg images are known as chloropleths"
+"A choropleth should have a title, a key, and contextual cues to help identify geography, such as county borders"
+
+
+geo2topo -n \
+  tracts=ca-albers-density.ndjson \
+  > ca-tracts-topo.json
+
+tracts=…, allows you to specify multiple named GeoJSON inputs,
+
+"Converts to TopoJSon"
+
+
+toposimplify -p 1 -f \
+  < ca-tracts-topo.json \
+  > ca-simple-topo.json
+
+args:  -s  If simplifying before projecting, min area threshold
+
+"reduces to 3.1"
+
+
+topoquantize 1e5 \
+  < ca-simple-topo.json \
+  > ca-quantized-topo.json
+
+"reduce to 1.6"
+
+
+topomerge -k 'd.id.slice(0, 3)' counties=tracts \
+  < ca-quantized-topo.json \
+  > ca-merge-topo.json
+
+"defaults to divide by county borders anyway"	
+
+
+topomerge --mesh -f 'a !== b' counties=counties \
+  < ca-merge-topo.json \
+  > ca-topo.json
+
+"leaves out state borders, only deals with county borders"
+
+
+
+
 
 
 

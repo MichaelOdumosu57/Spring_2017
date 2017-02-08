@@ -1,0 +1,4 @@
+Questions for lecture #3
+for binary left shift and right shift
+What do I do when there is no space like
+1011 for example

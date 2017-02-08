@@ -1,0 +1,23 @@
+C command line
+
+
+
+
+[text editor] [file].c
+
+"Make a file"
+
+
+gcc [file] 
+
+"make a c executable"
+
+
+gcc -o [execuatable] [file]
+
+"make a new executable for specified file"
+
+
+a.out 
+
+"executes file"
