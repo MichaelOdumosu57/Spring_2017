@@ -1,4 +1,5 @@
 Using vim
+http://www.yolinux.com/TUTORIALS/LinuxTutorialAdvanced_vi.html
 
 cat [file] to see whats in file
 cat [file] | [format file] pretty prints files not meant for humans
