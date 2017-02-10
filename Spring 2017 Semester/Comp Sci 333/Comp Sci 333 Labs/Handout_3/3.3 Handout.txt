@@ -1,0 +1,16 @@
+3.3 Handout
+
+printf("text");
+
+"can use printf to print without using a type specifier"
+
+
+questions
+
+for the if statements in your code, you also do not use brackets
+can you tell me the certain cases for this
+
+ex:
+if (*min > x[j]) *min = x[j];
+
+also why did putty make a "core" file

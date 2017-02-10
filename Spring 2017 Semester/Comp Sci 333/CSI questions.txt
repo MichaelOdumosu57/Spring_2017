@@ -1,0 +1,7 @@
+Questions for lecture #3
+for binary left shift and right shift
+What do I do when there is no space like
+1011 for example
+
+Questions for lecture #4
+I do not understand unions, what do you mean by enum is that another sort of struct

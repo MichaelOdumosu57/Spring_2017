@@ -1,0 +1,139 @@
+
+ogr2ogr \
+  -f GeoJSON \
+  -where "ADM0_A3 IN ('GBR', 'IRL')" \
+  subunits.json \
+  ne_10m_admin_0_map_subunits.shp
+
+"ADMO highest level admin boundaries"
+"A3 refers to ISO 3166-1 alpha 3 counties
+	
+
+ogr2ogr \
+  -f GeoJSON \
+  -where "ISO_A2 = 'GB' AND SCALERANK < 8" \
+  places.json \
+  ne_10m_populated_places.shp
+
+"ISO_A2 for places properties
+"SCALERANK delets to major cities
+
+
+geo2topo \
+  -o uk.json \
+  --id-property SU_A3 \
+  --properties name=NAME \
+  -- \
+  subunits.json \
+  places.json
+
+"For combining subunits and places to a single file for further work"
+also do 
+  --id-property SU_A3 \
+  --properties name=NAME "
+-clipdst shapes it to rectangular bounding box, for displaying certain features"
+if .shp uses a gridded coord sys (UTM) use -t srs EPSG:4326 to convert
+to conventional latitiude and longitude
+
+
+http-server -p 8008
+
+"Opens up a localhost server at 8008"
+
+
+d3.json("uk.json", function(error, uk) {
+  if (error) return console.error(error);
+  console.log(uk);
+});
+
+"shows the object in the f12 Javascript console
+
+
+var width = 960,
+    height = 1160;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+"Init svg image for the map on the website"
+"projection- projects spherical coordinates to cartesian plane"
+"path generator- takes 2d geometry and formats its for svg or canvas" 
+"basically...
+		
+
+     var subunits = topojson.feature(uk, uk.objects.subunits);
+
+     "Converts stored topojson back to display-friendly geojson"
+
+
+     var projection = d3.geo.mercator()
+       .scale(500)
+       .translate([width / 2, height / 2]);
+
+     "This projects the coordinates to a cartesian plane"
+
+
+      var path = d3.geo.path()
+         .projection(projection);
+
+     "Organizes everything so you can see it"
+
+      svg.append("path")
+         .datum(subunits)
+         .attr("d", path);
+
+    "place in the d3.json call that makes the object that is to be filled"
+
+
+d3.geo.albers()
+    .center([0, 55.4])
+    .rotate([4.4, 0])
+    .parallels([50, 60])
+    .scale(6000)
+    .translate([width / 2, height / 2]);
+
+"Use instead of d3.geo.mercator() in d3.json function call to get better results of the map"
+
+
+svg.selectAll(".subunit")
+    .data(topojson.feature(uk, uk.objects.subunits).features)
+  .enter().append("path")
+    .attr("class", function(d) { return "subunit " + d.id; })
+    .attr("d", path);
+
+"uk.json topoJSON file has a features collection known as features
+array, so I make a data join, (many features) and make a path element
+for each feature"
+
+
+.subunit.SCT { fill: #ddc; }
+.subunit.WLS { fill: #cdd; }
+.subunit.NIR { fill: #cdc; }
+.subunit.ENG { fill: #dcd; }
+.subunit.IRL { display: none; }
+
+"also makes class attributes for them, (takes from file	  	
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

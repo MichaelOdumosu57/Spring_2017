@@ -1,0 +1,21 @@
+3.2 Handout
+
+Lessons
+
+array[index] ++
+
+"adds one to the value in the index of that array"
+
+
+srand(#)
+
+"Range of numbers in random machine generator"
+
+
+Questions
+why do at certain times you place no brackets around the for loop and it works
+can you tell me the execptions
+
+like here
+for (i = 1; i <= NUM_FACES; i++)
+frequency[i] = 0;

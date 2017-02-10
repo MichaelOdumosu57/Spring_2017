@@ -1,0 +1,457 @@
+http://html.net/tutorials/css/lesson5.php
+LYNDA.COM/SMARTER
+Javascript Time
+make timers
+   setTimeout(action, milliseconds) - browswer waits before execution
+   setInterval(codeToExecute, timeIntervalInMilliseconds) - executes code at intervals
+delete timers
+   clearTimeout(timerVariable) clears timeout
+   clearInterval(timerVariable) clears interval
+using inamges properly
+    var myNewImage = new Image();
+    myNewImage.src = "images/testimage.jpg";
+
+
+Javascript submitting forms
+<form id="myForm" action="#" method="post"> - makes submission form
+<fieldset> -- set of associated fields
+<label for = "text"><input type = 'text'>  - to label a box
+
+
+
+Javascript cookies
+! document.cookie - if no cookies left
+escape() = make sure var name has no unallowed characters
+
+Set expiry day
+   var expiryDate = new Date();		
+   expiryDate.setTime(expiryDate.getTime() + (60 * 1000));
+
+create a cookie
+   var cookieName = "Test Cookie";
+   var myCookie = escape(cookieName);
+   document.cookie = "myCookie=" + myCookie + ";" + "expires=" + expiryDate.toGMTString() + ";";
+
+Using cookies
+   unescape() to unremove unallowed characters for use
+   var myCookieString = unescape(document.cookie);
+   var dataList = myCookieString.split(";");
+   var neededlist = dataList.split("=")
+   document.write(neededlist[1])
+
+
+
+Javascript DOM (Document Object)
+document.title;
+document.URL;
+document.lastModified;
+document.getElementsByTagName("li"); a list is made
+listElems[i].style.backgroundColor = "red";		
+listElems[i].style.color = "white";
+How to create new elements
+   document.createElement("p");
+   document.body.appendChild(newParagraph);
+   document.createTextNode("Hello DOM standard");
+   newParagraph.appendChild(newTextPara);
+to set an attribute
+   newParagraph.setAttribute("id", "newParagraph");
+		
+to delete elements
+    var remove = document.getelementById()
+   document.body.removeChild();	 
+
+Javascript Arrays
+ways to make it
+   new Array();
+   new Array(item0, item1, item2 ...)
+   var colors = ["green", "red"];
+loop arrays
+    for(item in items)
+var colors = ["green", "red",]
+colors[1] = 'pick"
+array.sort()- sorts the array
+
+Javascript Math
+Math.PI = value of pi
+Math.sqrt() = sqrt of a value
+parseInt()/parseFloat() - to convert strings to numbers;
+isNaN() to check whether a value is or is not a number;
+function sortAscending(a, b) -small to big # a-b
+function sortDescending(a, b)-big to small # b-a
+array.push(value) - to add to an array
+array.pop(value)- take a value
+array.shift- takes the first value
+
+
+
+JavaScript Dates
+new Date().toLocaleDateString(); - adjust the date
+new Date(milliseconds).toLocaleDateString(); - gives date counting milliseconds from 1/1/1970
+new Date("10 November, 2011").toLocaleDateString(); - you put in your own date
+//new Date(year, month, day, hours, minutes, seconds, milliseconds) - only year and month are req, others optional
+myDate.getDate()); - gets the number date
+myDate.getTime());-  gets the time in milliseconds from 1/1/1970 
+myDate.getFullYear()); - gets the current year
+myDate.getMonth()); - gets number representation of month (Jan - Dec 0-11)
+myDate.getDay()); - gets number representation of the day of the week (Sunday -Sat , 0-6)
+ myDate.getHours(); - gets hours
+myDate.getMinutes();- gets minutes
+var mySetDate = myDate.setFullYear(2011, 9, 31); - create the object then change the date
+
+
+
+
+JavaScript strings
+length property;
+•toLowerCase()/toUpperCase();
+•match();
+•replace();
+•indexOf().
+
+
+
+
+JavaScript loops
+var value = document.getelementbyID("element id")
+for( var i = 1; i >stop; i++)
+{  value.innerHTML += 'img  src = "png.jpg"'
+
+
+JavaScript comparison
+== equal to
+=== equal to and same type
+
+JavaScript Text
+Just like python
+
+JavaScript Events
+ onfocus, onblur, onmouseover, onmouseout and onsubmit attributes of an HTML element.
+onclick="alert('Going anywhere? Not so fast!'); return false;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CSS selectors
+http://www.w3schools.com/cssref/css_selectors.asp
+
+
+CSS check
+not all browers agree when it comes to CSS
+go here to check
+http://jigsaw.w3.org/css-validator/
+CSS depth 
+#id {
+	...
+	z-index: 1-as many pictures
+	
+}
+
+<img id = "id" src "gif.jpg">
+
+CSS position
+#box4 {
+		position:absolute;
+		bottom: 50px;
+		left: 50px;
+	}
+according to page
+
+#dog1 {
+		position:relative;
+		left: 350px;
+		bottom: 150px;
+	}
+	#dog2 {
+		position:relative;
+		left: 150px;
+		bottom: 500px;
+	}
+relative to each other
+top,right,bottom left
+
+CSS Dimensions
+
+Height
+Width
+
+height:
+width: 
+creates a box w/ dim for text
+
+CSS Float
+<div id = "this_pict">
+		<img src= "butterfly.gif"/>
+	</div>
+<p> ... </p>
+#this_pict {
+		float: right;
+		width: 500px
+	}
+put picture and text together
+
+-colums
+ make width under 50%
+
+float :left right
+clear left right, both none
+
+clear, 
+<p class ="floatstop"> sdsag </p>
+for putting text under a picture
+
+
+CSS box model
+
+border: 
+
+p {
+		border-width: 1px;
+		border-style: solid;
+		border-color: blue;
+	}
+p {
+		border: 1px solid blue;
+	}
+	
+	
+h1 {
+		border-top-width: thick;
+		border-top-style: solid;
+		border-top-color: red;
+
+		border-bottom-width: thick;
+		border-bottom-style: solid;
+		border-bottom-color: blue;
+
+		border-right-width: thick;
+		border-right-style: solid;
+		border-right-color: green;
+
+		border-left-width: thick;
+		border-left-style: solid;
+		border-left-color: orange;
+	
+	[border-width] 1px -10px, thin medium thick
+	[border-stlye] dotted dashed solid
+			double groove
+			ridge inset outset
+	[border-color] rgb(x,y,z) (0-255 fr values), "color name
+			#AAFFAA
+margin:
+body {
+		margin-top: 100px;
+		margin-right: 40px;
+		margin-bottom: 10px;
+		margin-left: 70px;
+	}
+	
+body {
+	margin: 100px 40px 10px 70px;
+	}
+
+padding:
+h1 {
+		background: yellow;
+		padding: 20px 20px 20px 80px;
+	}
+
+h2 {
+	background: orange;
+	padding-left:120px;
+	}
+	
+	
+CSS class
+<h1 id="c1">Chapter 1</h1>
+
+#c1 {
+		color: red;
+	}
+
+<a href="ri.htm" class="whitewine">
+
+a class
+a.whitewine {
+		color: #FFBB00;
+	}
+
+CSS links
+link (unvisited) visited, hover, active
+
+CSS text
+text-indent: 30px;         indents the paragraph
+
+text-align: right;           Like MS word
+            left;
+            center;
+            justify;          Straigtens it out
+
+text-decoration: underline;
+	
+
+text-transform:letter-spacing:text-decoration:text-align:text-indent:
+
+
+CSS font
+(not text)
+font-style: italic;
+            normal;
+            oblique;
+
+
+font-variant: small-caps;
+              normal;
+
+font-weight:   bold;
+               normal
+               100-900                         In hundreds
+
+font-size: 30px;             absolute
+           12pt;
+           120%;             relative to zoom
+           1em;
+
+font family: family-name, generic-family     desired font if not available uses fonts 
+                                             family which has fonts with similar 
+                                             features
+                                              
+             "family name"                   if a font name includes more than one word
+                                             place in quotes
+
+
+The order of values for font is:
+font-style | font-variant | font-weight | font-size | font-family
+
+
+CSS Background	
+background-color: #FFCC66;
+                  red;
+                  rgb(x,y,z);
+
+background-image: url("butterfly.gif");
+
+background-repeat: no-repeat; (prints image once
+                   repeat-x   (repeats horiz
+                   repeat-y   (repats vert
+                   repeat     (repeat horiz and vert
+
+background-attachment: fixed;   (stays on page
+                       scroll;  (scrolls with page
+
+background-position: right   bottom;
+                     left    top;
+                     middle  center;
+
+                     cm        cm        from top left
+                      %         %         from top left
+                      px        px         Where pixel is located on monitor
+
+The list of order is as follows:
+[background-color] | [background-image] | [background-repeat] | [background-attachment] | [background-position]
+If a property is left out, it will automatically be set to its default value. 
+For example, if background-attachment and background-position are taken out of the example:
+
+CSS color
+color: #ff0000;
+        red;
+        rgb(x,y,z);
+
+CSS Files
+
+element
+{...
+}
+
+element.class
+{...
+}
+
+#id
+{..
+}
+
+CSS Applied
+1. In line
+<element style = ";">
+
+2.Internal using own element (used in head element)
+<style type = "text/css">
+...
+</style>
+
+3. make a .css file
+in html
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+
+HTML tables
+<table>
+border = "1" sets thickness
+width = "30%" sets table width relative to scrn
+<tr>         belongs in <td>
+<td>         belongs in <tr>
+align =      left 
+             middle 
+             right
+
+valign =    top
+            center
+            bottom 
+colspan =   3 how many horizontal boxes a cell takes
+rowspan =   3 how many vertical boxes a cell takes
+
+
+
+HTML images
+<img>
+src =   " gif.jpg.png" opens image
+        " folder/gif.jpg.png" - goes through folder
+        " web.net/gif.jpg"  - gets it from website
+
+alt =   if original image doesnot work
+
+width = '100px'   changes width and height of pictures
+height = '100px'  resizes in browers, actual same is not changed, use img editing
+
+
+
+        
+
+
+HTML links
+<a>
+href = "website.html"
+       "../website.html" - go up subdir
+        "subfolder/web.html" - go down dir
+       "mailto:nobody@html.net" open default email program
+        #heading - links to part in same page
+        
+title = 'value' (on mouse hover)
+
+put <img> after <a> to make image a link
+
+
+
+HTML text
+<h1-7> <p>
+style = background-color: #ff0000 ;
+                          red;
+                           rgb(x,y,z);
+

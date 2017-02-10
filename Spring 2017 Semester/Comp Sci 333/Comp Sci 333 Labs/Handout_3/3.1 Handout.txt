@@ -1,0 +1,4 @@
+Handout 3.1 questions
+I rewrite the code in putty but nothing is printing
+I found the bug to be at the beginning of the while statement in your code
+I am not too sure with what exactly is happening, can you please explain and help

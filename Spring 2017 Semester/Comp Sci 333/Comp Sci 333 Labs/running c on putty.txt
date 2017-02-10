@@ -1,0 +1,38 @@
+C command line
+
+
+
+
+[text editor] [file].c
+
+"Make a file"
+
+
+gcc [file] 
+
+"make a c executable"
+
+
+gcc -o [execuatable] [file]
+
+"make a new executable for specified file"
+
+
+a.out 
+
+"executes file"
+
+-rwx------ 
+"an executable"
+
+cp -i newfile oldfile
+
+"rename file, makes a copy"
+
+cp -R newdir olddir
+
+"rename dir, keeps old dir"
+
+cp file /dir
+
+"move a file into a directory"
