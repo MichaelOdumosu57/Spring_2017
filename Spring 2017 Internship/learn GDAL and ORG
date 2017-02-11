@@ -104,7 +104,8 @@ svg.selectAll(".subunit")
 
 "uk.json topoJSON file has a features collection known as features
 array, so I make a data join, (many features) and make a path element
-for each feature"
+for each feature. Here you are making classes for all the countries or places 
+in the JSON file"
 
 
 .subunit.SCT { fill: #ddc; }
@@ -113,9 +114,53 @@ for each feature"
 .subunit.ENG { fill: #dcd; }
 .subunit.IRL { display: none; }
 
-"also makes class attributes for them, (takes from file	  	
+"also makes class attributes for them, (takes from file	)  	
   
 
+
+properties.BRK_A3
+
+"ID for country or places"
+
+svg.append("path");
+
+"Gives specification to your map, you can do this as many times as needed"
+
+
+ svg.append("path")
+    .datum(topojson.mesh(uk, uk.objects.subunits, function(a, b) { return a !== b && a.properties.BRK_A3 !== "IRL"; }))
+    .attr("d", path)
+    .attr("class", "subunit-boundary");
+
+svg.append("path")
+    .datum(topojson.mesh(uk, uk.objects.subunits, function(a, b) { return a === b && a.properties.BRK_A3 === "IRL"; }))
+    .attr("d", path)
+    .attr("class", "subunit-boundary IRL");
+
+"Retrieving data to make a new class out of a given object from the svg image path"
+
+
+svg.append("path")
+    .datum(topojson.feature(uk, uk.objects.places))
+    .attr("d", path)
+    .attr("class", "place");
+
+"This will draw a small circle for each city."
+
+
+svg.selectAll(".place-label")
+    .data(topojson.feature(uk, uk.objects.places).features)
+  .enter().append("text")
+    .attr("class", "place-label")
+    .attr("transform", function(d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
+    .attr("dy", ".35em")
+    .text(function(d) { return d.properties.name; });
+
+svg.selectAll(".place-label")
+    .attr("x", function(d) { return d.geometry.coordinates[0] > -1 ? 6 : -6; })
+    .style("text-anchor", function(d) { return d.geometry.coordinates[0] > -1 ? "start" : "end"; });
+
+"This will give each city a name by data join, however it doesnt work because d.properties.name is not returning the name of the cities follow up with Alex"
 
 
 

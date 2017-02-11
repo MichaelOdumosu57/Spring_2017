@@ -253,8 +253,7 @@ h1 {
 	[border-stlye] dotted dashed solid
 			double groove
 			ridge inset outset
-	[border-color] rgb(x,y,z) (0-255 fr values), "color name
-			#AAFFAA
+	[border-color] rgb(x,y,z) (0-255 fr values), "color name #AAFFAA
 margin:
 body {
 		margin-top: 100px;
@@ -293,8 +292,25 @@ a.whitewine {
 		color: #FFBB00;
 	}
 
+{fill:   #AABBCC;}
+	#ABC;}
+	color;}
+	rgb();}
+
+
+
+
+
 CSS links
-link (unvisited) visited, hover, active
+element : (unvisited) 
+	   visited
+	   hover
+           active
+
+
+
+
+
 
 CSS text
 text-indent: 30px;         indents the paragraph
@@ -340,6 +356,25 @@ font family: family-name, generic-family     desired font if not available uses 
 The order of values for font is:
 font-style | font-variant | font-weight | font-size | font-family
 
+CSS irreg shapes
+stroke: #AABBCC;  //stroke = border
+	#ABC;
+	color;
+	rgb();
+
+stroke-width: px;
+
+stroke-dasharray: 1-9,1-12; //thickness, amount of dots
+
+stroke-linejoin: round;
+
+fill:   #AABBCC;
+	#ABC;
+	color;
+	rgb();
+
+display : none
+
 
 CSS Background	
 background-color: #FFCC66;
@@ -381,6 +416,10 @@ element
 }
 
 element.class
+{...
+}
+
+.class
 {...
 }
 

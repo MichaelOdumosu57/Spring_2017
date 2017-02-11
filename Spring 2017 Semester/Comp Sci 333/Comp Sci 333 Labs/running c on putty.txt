@@ -36,3 +36,7 @@ cp -R newdir olddir
 cp file /dir
 
 "move a file into a directory"
+
+Ctrl - D (EOF)
+
+"tELLS COMPLIER i REACHED END OF INPUT"
