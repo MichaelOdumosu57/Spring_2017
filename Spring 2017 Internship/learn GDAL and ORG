@@ -160,7 +160,17 @@ svg.selectAll(".place-label")
     .attr("x", function(d) { return d.geometry.coordinates[0] > -1 ? 6 : -6; })
     .style("text-anchor", function(d) { return d.geometry.coordinates[0] > -1 ? "start" : "end"; });
 
-"This will give each city a name by data join, however it doesnt work because d.properties.name is not returning the name of the cities follow up with Alex"
+"This will give each city a name by data join, use console log on a property group if it does not work"
+
+svg.selectAll(".subunit-label")
+    .data(topojson.feature(uk, uk.objects.subunits).features)
+  .enter().append("text")
+    .attr("class", function(d) { return "subunit-label " + d.id; })
+    .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+    .attr("dy", ".35em")
+    .text(function(d) { return d.properties.name; });
+
+"This gives you the name of the countries"
 
 
 

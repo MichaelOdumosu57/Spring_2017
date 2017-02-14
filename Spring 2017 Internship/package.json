@@ -12,6 +12,7 @@
     "d3": "^4.5.0",
     "d3-geo-projection": "^1.2.1",
     "geojson": "^0.4.1",
+    "http-server": "^0.9.0",
     "ndjson-cli": "^0.3.0",
     "shapefile": "^0.6.2",
     "topojson": "^2.2.0"

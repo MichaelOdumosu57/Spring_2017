@@ -1,5 +1,21 @@
 http://html.net/tutorials/css/lesson5.php
 LYNDA.COM/SMARTER
+
+Console 
+Console.log(object);
+
+"describes everything in the object, so you can find the right values
+
+
+
+
+
+
+
+
+
+
+
 Javascript Time
 make timers
    setTimeout(action, milliseconds) - browswer waits before execution
@@ -374,6 +390,10 @@ fill:   #AABBCC;
 	rgb();
 
 display : none
+
+fill-opacity: .1-1 // how dim text is
+
+text-anchor: middle
 
 
 CSS Background	
