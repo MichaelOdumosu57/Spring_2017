@@ -1,0 +1,2 @@
+any function call make check of memory allocation
+The library <stdlib.h> is needed for the exit function.

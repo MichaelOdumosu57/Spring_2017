@@ -1,0 +1,15 @@
+learning linux cmd
+wget
+
+"pulls file from website and places in directory"
+
+
+ln -s ~/code/bubble_maps/ /var/www/html
+
+"puts your directory as a symbolic link and if you type localhost it appears"
+
+
+chmod +x [file]
+
+"chmod is the command, this changes the attributes of the file, in other words 
+what you can do w/ the file, +x here for example makes it an executable file"
