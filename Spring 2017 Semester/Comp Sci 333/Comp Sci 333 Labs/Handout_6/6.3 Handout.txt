@@ -1,0 +1,14 @@
+Handout 6.3
+
+exit(1)
+
+"exits code if nothing works out"
+
+
+FILE *[fakefile]
+
+"How C works w/ real #"
+
+
+Question
+which takes more data arrays or files?	
