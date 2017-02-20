@@ -1,0 +1,15 @@
+{
+  "name": "bubble_maps",
+  "version": "1.0.0",
+  "description": "First commit for bubble maps project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^4.5.0"
+  },
+  "devDependencies": {}
+}

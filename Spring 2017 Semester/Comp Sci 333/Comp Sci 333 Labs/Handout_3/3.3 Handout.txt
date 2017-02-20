@@ -4,13 +4,12 @@ printf("text");
 
 "can use printf to print without using a type specifier"
 
+core
 
-questions
+"putty makes this file when there is a bug and it decides to dump all
+the memory"
 
-for the if statements in your code, you also do not use brackets
-can you tell me the certain cases for this
 
-ex:
 if (*min > x[j]) *min = x[j];
 
-also why did putty make a "core" file
+"You can do this if there is one statement executed"
