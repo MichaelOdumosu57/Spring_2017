@@ -1,0 +1,31 @@
+binary - decimal
+         octal 
+		 hex
+		 
+decimal- binary		 
+		octal 
+		 hex
+	
+octal- binary		 
+	   decimal 
+	    hex
+
+hex   - binary		 
+		decimal
+		octal
+		
+0110101 = 53 
+101101 = 55 
+1011 0101 0101 = B55
+
+27 = 11011
+234 = 352
+784 = 310
+
+424 = 100 010 100
+365 = 245
+
+ADFC = 1010 1101 1111 1100
+EABB = 57344 + 2560 + 176 + 11 = 60091
+		
+		
