@@ -1,0 +1,1063 @@
+left off at http://www.javatpoint.com/bootstrap-badges-and-labels   
+read the txt inside the tags :)
+//some reason html can hold only so much data before you need another page videos are especially tricky, make sure you send them to another page while using bootstrap
+
+Bootstrap Collaspse
+//hide and show stuff under certain condition
+//when two collapse objects are on the same page for everywhere you use #collapse[number] ,make different numbers for every object
+
+<div class="container">  
+  <h2>Basic Collapse Example</h2>  
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>  
+  <div id="demo" class="collapse">  
+Tigers and Lions are the most ferocious animals on the earth. They belong to the felidae(cat) family.   
+They are both from the four big cats. These four big cats are Lion, Tiger, Leopard, and Jaguar.  
+ These animals reside on the top of the food chain and don't have any predators.  
+  </div>  
+</div>
+
+
+
+
+
+
+<div class="container">  
+  <h2>Collapsible Panel</h2>  
+  <div class="panel-group">  
+    <div class="panel panel-default">  
+      <div class="panel-heading">  
+        <h4 class="panel-title">  
+          <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>  
+        </h4>  
+      </div>  
+      <div id="collapse1" class="panel-collapse collapse">  
+        <div class="panel-body">Panel Body</div>  
+        <div class="panel-footer">Panel Footer</div>  
+      </div>  
+    </div>  
+  </div>  
+</div> 
+
+
+
+
+
+<div class="container">  
+  <h2>Collapsible List Group</h2>  
+  <div class="panel-group">  
+    <div class="panel panel-default">  
+      <div class="panel-heading">  
+        <h4 class="panel-title">  
+          <a data-toggle="collapse" href="#collapse2">Collapsible list group</a>  
+        </h4>  
+      </div>  
+      <div id="collapse2" class="panel-collapse collapse">  
+        <ul class="list-group">  
+          <li class="list-group-item">One</li>  
+          <li class="list-group-item">Two</li>  
+          <li class="list-group-item">Three</li>  
+        </ul>  
+        <div class="panel-footer">Footer</div>  
+      </div>  
+    </div>  
+  </div>  
+</div>  
+
+
+
+
+Bootstrap Dropdowns
+
+//Dropdown menus are toggleable, contextual menus, used for displaying links in a list format. It facilitates users to choose one value from a predefined list. This can be made interactive with the dropdown JavaScript plugin.
+//if a dropdown selection is disabled it would send you back to the top of the page if you click on it
+
+<div class="container">  
+  <h2>Dropdowns</h2>  
+  <p>The .dropdown class is used to indicate a dropdown menu.</p>  
+  <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>  
+  <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".</p>                                            
+  <div class="dropdown">  
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example  
+    <span class="caret"></span></button>  
+    <ul class="dropdown-menu">  
+      <li><a href="#">HTML</a></li>  
+      <li><a href="#">CSS</a></li>  
+      <li><a href="#">JavaScript</a></li>  
+    </ul>  
+  </div>  
+</div>  
+
+
+
+<div class="container">  
+  <h2>Dropdowns</h2>  
+  <p>The .divider class is used to separate links inside the dropdown menu:</p>  
+  <div class="dropdown">  
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials  
+    <span class="caret"></span></button>  
+    <ul class="dropdown-menu">  
+      <li><a href="#">HTML</a></li>  
+      <li><a href="#">CSS</a></li>  
+      <li><a href="#">JavaScript</a></li>  
+      <li class="divider"></li>  
+      <li><a href="#">About Us</a></li>  
+    </ul>  
+  </div>  
+</div>  
+
+
+
+
+
+<div class="container">  
+  <h2>Dropdowns</h2>  
+  <p>The .dropdown-header class is used to add headers inside the dropdown menu:</p>  
+  <div class="dropdown">  
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials  
+    <span class="caret"></span></button>  
+    <ul class="dropdown-menu">  
+      <li class="dropdown-header">Dropdown header 1</li>  
+      <li><a href="#">HTML</a></li>  
+      <li><a href="#">CSS</a></li>  
+      <li><a href="#">JavaScript</a></li>  
+      <li class="divider"></li>  
+      <li class="dropdown-header">Dropdown header 2</li>  
+      <li><a href="#">About Us</a></li>  
+    </ul>  
+  </div>  
+</div>
+
+
+
+
+
+<div class="container">  
+  <h2>Dropdowns</h2>  
+  <p>Here, CSS is disable.</p>  
+  <div class="dropdown">  
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials  
+    <span class="caret"></span></button>  
+    <ul class="dropdown-menu">  
+      <li><a href="#">HTML</a></li>  
+      <li class="disabled"><a href="#">CSS</a></li>  
+      <li><a href="#">JavaScript</a></li>  
+      <li class="divider"></li>  
+      <li><a href="#">About Us</a></li>  
+    </ul>  
+  </div>  
+</div> 
+Bootstrap List Groups
+//Bootstrap list group is used to create a group of list with list items. The most basic list group is an unordered list containing list items.
+
+<div class="container">  
+  <h2>Basic List Group Example</h2>  
+  <ul class="list-group">  
+    <li class="list-group-item">First item</li>  
+    <li class="list-group-item">Second item</li>  
+    <li class="list-group-item">Third item</li>  
+  </ul>  
+</div>  
+
+
+
+
+
+<div class="container">  
+  <h2>List Group With Badges</h2>  
+  <ul class="list-group">  
+    <li class="list-group-item"><span class="badge">12</span> New</li>  
+    <li class="list-group-item"><span class="badge">5</span> Deleted</li>    
+    <li class="list-group-item"><span class="badge">3</span> Warnings</li>    
+  </ul>  
+</div>  
+
+
+
+
+
+
+<div class="container">  
+  <h2>List Group With Linked Items</h2>  
+  <div class="list-group">  
+    <a href="#" class="list-group-item">First item</a>  
+    <a href="#" class="list-group-item">Second item</a>  
+    <a href="#" class="list-group-item">Third item</a>  
+  </div>  
+</div> 
+
+
+
+
+
+<div class="container">  
+  <h2>Active Item in a List Group</h2>  
+  <div class="list-group">  
+    <a href="#" class="list-group-item active">First item (This is active item)</a>  
+    <a href="#" class="list-group-item">Second item</a>  
+    <a href="#" class="list-group-item">Third item</a>  
+  </div>  
+</div>
+
+
+
+
+
+
+
+<div class="container">  
+  <h2>List Group With Contextual Classes</h2>  
+  <ul class="list-group">  
+    <li class="list-group-item list-group-item-success">First item</li>  
+    <li class="list-group-item list-group-item-info">Second item</li>  
+    <li class="list-group-item list-group-item-warning">Third item</li>  
+    <li class="list-group-item list-group-item-danger">Fourth item</li>  
+  </ul>  
+    
+  <h2>Linked Items With Contextual Classes</h2>  
+    <a href="#" class="list-group-item list-group-item-success">First item</a>  
+    <a href="#" class="list-group-item list-group-item-info">Second item</a>  
+    <a href="#" class="list-group-item list-group-item-warning">Third item</a>  
+    <a href="#" class="list-group-item list-group-item-danger">Fourth item</a>  
+</div>  
+
+Bootstrap Progress Bar
+//The progress bar shows how far a user is in a process. In Bootstrap, there are several types of progress bars.
+
+<div class="container">  
+  <h2>Default Progress Bar</h2>  
+  <div class="progress">  
+    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">  
+      <span class="sr-only">70% Complete</span>  
+    </div>  
+  </div>  
+</div>      
+    
+<div class="container">  
+  <h2>Progress Bar With Label</h2>  
+  <div class="progress">  
+    <div class="progress-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" style="width:76%">  
+      76%  
+    </div>  
+  </div>  
+</div> 
+
+<div class="container">  
+  <h2>Colored Progress Bars</h2>  
+  <p>The contextual classes colors the progress bars:</p>   
+  <div class="progress">  
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">  
+      40% Complete (success)  
+    </div>  
+  </div>  
+  <div class="progress">  
+    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">  
+      50% Complete (info)  
+    </div>  
+  </div>  
+  <div class="progress">  
+    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">  
+      60% Complete (warning)  
+    </div>  
+  </div>  
+  <div class="progress">  
+    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">  
+      70% Complete (danger)  
+    </div>  
+  </div>  
+</div>  
+
+
+
+
+<div class="container">  
+  <h2>Striped Progress Bars</h2>  
+  <p>The .progress-bar-striped class adds stripes to the progress bars:</p>   
+  <div class="progress">  
+    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">  
+      40% Complete (success)  
+    </div>  
+  </div>  
+    <div class="progress">  
+    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">  
+      50% Complete (info)  
+    </div>  
+  </div>
+</div>  
+
+
+
+
+
+
+<div class="container">  
+  <h2>Animated Progress Bar</h2>  
+  <p>The .active class animates the progress bar:</p>   
+  <div class="progress">  
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">  
+      70%  
+    </div>  
+  </div>  
+</div> 
+
+
+
+
+
+
+<div class="container">  
+  <h2>Stacked Progress Bars</h2>  
+  <p>Create a stacked progress bar by placing multiple bars into the same div with class .progress:</p>   
+  <div class="progress">  
+    <div class="progress-bar progress-bar-success" role="progressbar" style="width:40%">  
+      Free Space  
+    </div>  
+    <div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%">  
+      Warning  
+    </div>  
+    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">  
+      Danger  
+    </div>  
+  </div>  
+</div>
+
+
+
+
+Bootstrap Carousel
+//makes objects in your webpage slide around
+hard to have two carousels operating at the same time
+
+
+//this is between head and body
+<style>  
+  .carousel-inner > .item > img,  
+  .carousel-inner > .item > a > img {  
+      width: 80%;  
+      margin: auto;  
+  }  
+</style>  
+  
+ _________________________________ <body>_________________________________  
+  
+<div class="container">  
+  <h1>Carousel Example</h1>  
+  
+<div id="myCarousel" class="carousel slide" data-ride="carousel">  
+    <!-- Indicators -->  
+    <ol class="carousel-indicators">  
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>  
+      <li data-target="#myCarousel" data-slide-to="1"></li>  
+      <li data-target="#myCarousel" data-slide-to="2"></li>  
+    </ol>  
+  
+    <!-- Wrapper for slides -->  
+    <div class="carousel-inner" role="listbox">  
+      <div class="item active">  
+        <img src="images/jokes1.jpg" alt="jokes 1" >  
+      </div>  
+  
+      <div class="item">  
+        <img src="images/jokes2.jpg" alt="jokes 2" >  
+      </div>  
+      
+      <div class="item">  
+        <img src="images/jokes3.jpg" alt="jokes 3" >  
+      </div>  
+    </div>  
+  
+    <!-- Left and right controls -->  
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">  
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>  
+      <span class="sr-only">Previous</span>  
+    </a>  
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">  
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>  
+      <span class="sr-only">Next</span>  
+    </a>  
+</div><!-- corousel end -->  
+  
+</div>  
+
+
+
+
+
+
+
+<div class="container">  
+  <h1>Carousel Example with captions</h1>  
+  
+<div id="myCarousel" class="carousel slide" data-ride="carousel">  
+    <!-- Indicators -->  
+    <ol class="carousel-indicators">  
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>  
+      <li data-target="#myCarousel" data-slide-to="1"></li>  
+      <li data-target="#myCarousel" data-slide-to="2"></li>  
+    </ol>  
+  
+    <!-- Wrapper for slides -->  
+    <div class="carousel-inner" role="listbox">  
+      <div class="item active">  
+        <img src="images/jokes1.jpg" alt="jokes 1" >  
+        <h3>Santa-Banta</h3>  
+        <p>Read Santa-Banta jokes at javaTpoint.</p>  
+      </div>  
+  
+      <div class="item">  
+        <img src="images/jokes2.jpg" alt="jokes 2" >  
+         <h3>Santa-Banta</h3>  
+        <p>Read Santa-Banta jokes at javaTpoint.</p>  
+      </div>  
+      
+      <div class="item">  
+        <img src="images/jokes3.jpg" alt="jokes 3" >  
+         <h3>Santa-Banta</h3>  
+        <p>Read Santa-Banta jokes at javaTpoint.</p>  
+      </div>  
+    </div>  
+  
+    <!-- Left and right controls -->  
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">  
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>  
+      <span class="sr-only">Previous</span>  
+    </a>  
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">  
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>  
+      <span class="sr-only">Next</span>  
+    </a>  
+</div><!-- corousel end -->  
+  
+</div>  
+
+
+
+
+Bootstrap Glychophons
+// Glyphicons are the icon fonts that are used in web projects. Bootstrap provides 260 Glyphicons from the Glyphicons Halflings set.
+use em you will see  what   I mean
+//there are 260 glycophons
+//go see how they are made so you can customize your own
+
+
+<div class="container">  
+  <h2>Glyphicon Examples</h2>  
+  <p>Envelope icon: <span class="glyphicon glyphicon-envelope"></span></p>      
+  <p>Envelope icon as a link:  
+    <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>  
+  </p>  
+  <p>Search icon: <span class="glyphicon glyphicon-search"></span></p>  
+  <p>Search icon on a button:  
+    <button type="button" class="btn btn-default">  
+      <span class="glyphicon glyphicon-search"></span> Search  
+    </button>  
+  </p>  
+  <p>Search icon on a styled button:  
+    <button type="button" class="btn btn-info">  
+      <span class="glyphicon glyphicon-search"></span> Search  
+    </button>  
+  </p>  
+  <p>Print icon: <span class="glyphicon glyphicon-print"></span></p>        
+  <p>Print icon on a styled link button:  
+    <a href="#" class="btn btn-success btn-lg">  
+      <span class="glyphicon glyphicon-print"></span> Print   
+    </a>  
+  </p>   
+</div>  
+
+Bootstrap Video
+
+/*to download and embed video from youtube
+from:
+https://www.youtube.com/watch?v=9t7rwmMqUTM
+to
+https://www.youtube.com/embed/9t7rwmMqUTM
+did you see that
+
+for final stuff like this
+lB6K60mkmho&list=WL&index=12
+just cut off that extra stuff at the end
+*/
+In Bootstrap, you can also add videos and scale them properly on any devices. The class .embed-responsive-item is used to create a responsive video. Class can be applied directly to <iframe>, <embed>, <video>, and <object> elements.
+
+seems to make sure you cant put anything else on the page
+*/
+
+<div class="container">  
+  <h2>Responsive Embed</h2>  
+  <div class="embed-responsive embed-responsive-16by9">  
+    <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/lB6K60mkmho&list=WL&index=12"></iframe>  
+  </div>  
+</div>  
+
+
+Bootstrap Images
+// 300px is equal to 300 here
+<div class="container">  
+  <h2>Rounded Corners</h2>           
+  <img src="abc.jpg" class="img-rounded" alt="abc" width="300" height="250">   
+</div>  
+
+<div class="container">  
+  <h2>Circle</h2>        
+  <img src="abc.jpg" class="img-circle" alt="abc"  width="300" height="250">   
+</div>  
+
+<div class="container">  
+  <h2>Thumbnail</h2>            
+  <img src="abc.png" class="img-thumbnail" alt="abc" width="300" height="250">   
+</div>  
+
+<div class="container">  
+  <h2>Responsive Image</h2>  
+  <img class="img-responsive" src="abc.jpg" alt="abc" width="460" height="345">   
+</div>  
+
+
+
+Bootstrap Pager
+//used for sequenatial previous and next buttons
+<div class="container">  
+  <h2>Pager Example</h2>                
+  <ul class="pager">  
+    <li><a href="#">Previous</a></li>  
+    <li><a href="#">Next</a></li>  
+  </ul>  
+</div>  
+
+<div class="container">  
+  <h2>Pager Align Button</h2>              
+  <ul class="pager">  
+    <li class="previous"><a href="#">Previous</a></li>  
+    <li class="next"><a href="#">Next</a></li>  
+  </ul>  
+</div> 
+
+Bootstrap Pagination
+//use with <ul> class most likely, try with others
+//used when you have too many sub-pages
+<div class="container">  
+  <h2>A basic pagination example:</h2>  
+  <p>The .pagination class provides pagination links:</p>                    
+  <ul class="pagination">  
+    <li><a href="#">1</a></li>  
+    <li><a href="#">2</a></li>  
+    <li><a href="#">3</a></li>  
+    <li><a href="#">4</a></li>  
+    <li><a href="#">5</a></li>  
+  </ul>  
+</div>
+
+<div class="container">  
+  <h2>Active State Pagination: Example</h2>  
+<p>Specify the current active state of the user.</p>  
+  <ul class="pagination">  
+    <li><a href="#">1</a></li>  
+    <li class="active"><a href="#">2</a></li>  
+    <li><a href="#">3</a></li>  
+    <li><a href="#">4</a></li>  
+    <li><a href="#">5</a></li>  
+  </ul>  
+
+<div class="container">  
+  <h2>Disabled State Pagination Example:</h2>  
+  <p>Here, 4 links are disabled.</p>  
+  <ul class="pagination">  
+    <li><a href="#">1</a></li>  
+    <li><a href="#">2</a></li>  
+    <li><a href="#">3</a></li>  
+    <li class="disabled"><a href="#">4</a></li>  
+    <li><a href="#">5</a></li>  
+  </ul>  
+</div>  
+
+<div class="container">  
+  <h2>Pagination - Sizing</h2>  
+  <p>Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks:</p>  
+  <ul class="pagination pagination-lg">  
+    <li><a href="#">1</a></li>  
+    <li><a href="#">2</a></li>  
+    <li><a href="#">3</a></li>  
+    <li><a href="#">4</a></li>  
+    <li><a href="#">5</a></li>  
+  </ul>  
+  
+  <ul class="pagination pagination-sm">  
+    <li><a href="#">1</a></li>  
+    <li><a href="#">2</a></li>  
+    <li><a href="#">3</a></li>  
+    <li><a href="#">4</a></li>  
+    <li><a href="#">5</a></li>  
+  </ul>  
+</div>  
+
+<div class="container">  
+  <h2>Breadcrumbs Example:</h2>  
+  <p>The .breadcrumb class indicates the current page's location within a navigational hierarchy:</p>                    
+  <ul class="breadcrumb">  
+    <li><a href="#">Java</a></li>  
+    <li><a href="#">SQL</a></li>  
+    <li><a href="#">Php</a></li>  
+    <li class="active">.Net</li>          
+  </ul>  
+</div>
+
+
+Bootstrap Panels
+
+<div class="container">  
+  <h1>Panel Example</h1>  
+  
+<div class="panel panel-primary">  
+  <div class="panel-heading">  
+    <h3 class="panel-title"><strong>Panel title</strong></h3>  
+  </div>  
+  <div class="panel-body">  
+    Panel content  
+  </div>  
+  <div class="panel-footer">  
+    <strong>Panel footer</strong>  
+  </div>  
+</div>  
+  
+</div>
+
+<div class="container">  
+  <h2>Panel Group</h2>  
+  <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>  
+  <div class="panel-group">  
+    <div class="panel panel-default">  
+      <div class="panel-heading">Panel Header</div>  
+      <div class="panel-body">Panel Content</div>  
+    </div>  
+    <div class="panel panel-default">  
+      <div class="panel-heading">Panel Header</div>  
+      <div class="panel-body">Panel Content</div>  
+    </div>  
+    <div class="panel panel-default">  
+      <div class="panel-heading">Panel Header</div>  
+      <div class="panel-body">Panel Content</div>  
+    </div>  
+  </div>  
+</div> 
+
+<div class="container">  
+  <h2>Panels with Contextual Classes</h2>  
+  <div class="panel-group">  
+    <div class="panel panel-default">  
+      <div class="panel-heading">Panel with panel-default class</div>  
+      <div class="panel-body">Panel Content</div>  
+    </div>  
+  
+    <div class="panel panel-primary">  
+      <div class="panel-heading">Panel with panel-primary class</div>  
+      <div class="panel-body">Panel Content</div>  
+    </div>  
+  
+    <div class="panel panel-success">  
+      <div class="panel-heading">Panel with panel-success class</div>  
+      <div class="panel-body">Panel Content</div>  
+    </div>  
+  
+    <div class="panel panel-info">  
+      <div class="panel-heading">Panel with panel-info class</div>  
+      <div class="panel-body">Panel Content</div>  
+    </div>  
+  
+    <div class="panel panel-warning">  
+      <div class="panel-heading">Panel with panel-warning class</div>  
+      <div class="panel-body">Panel Content</div>  
+    </div>  
+  
+    <div class="panel panel-danger">  
+      <div class="panel-heading">Panel with panel-danger class</div>  
+      <div class="panel-body">Panel Content</div>  
+    </div>  
+  </div>  
+</div>  
+
+Bootstrap Badges and Labels
+//badges used to highlight things like how many messages
+//labels used to offer additional information
+<div class="container">  
+  <h2>Badges</h2>  
+  <a href="#">News <span class="badge">5</span></a><br>  
+  <a href="#">Comments <span class="badge">10</span></a><br>  
+  <a href="#">Updates <span class="badge">2</span></a>  
+</div>
+
+
+
+<div class="container">  
+  <h2>Badges on Buttons</h2>  
+  <button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>  
+  <button type="button" class="btn btn-success">Success <span class="badge">3</span></button>      
+  <button type="button" class="btn btn-danger">Danger <span class="badge">5</span></button>          
+</div>
+
+
+
+<div class="container">  
+  <h2>Labels Example</h2>  
+  <h1>Update <span class="label label-default">New</span></h1>  
+  <h2>Update<span class="label label-default">New</span></h2>  
+  <h3>Update <span class="label label-default">New</span></h3>  
+  <h4>Update<span class="label label-default">New</span></h4>  
+  <h5>Update<span class="label label-default">New</span></h5>  
+  <h6>Update<span class="label label-default">New</span></h6>  
+</div>  
+
+<div class="container">  
+  <h2>Contextual Label Classes</h2>   
+  //used to make colors out of labels
+  <span class="label label-default">Default Label</span>  
+  <span class="label label-primary">Primary Label</span>  
+  <span class="label label-success">Success Label</span>  
+  <span class="label label-info">Info Label</span>  
+  <span class="label label-warning">Warning Label</span>  
+  <span class="label label-danger">Danger Label</span>  
+</div>  
+
+Bootstrap Wells
+//rounded border around an element with a gray background color and some padding. It is like a container that displays the content.
+
+<div class="container">  
+  <h2>Well Example</h2>  
+  <div class="well">Hi! I am a Basic Well.</div>  
+</div>  
+
+
+<div class="container">  
+  <h2>Well Size</h2>  
+  <div class="well well-sm">This is Small Well</div>  
+  <div class="well">This is Medium Well (By Default)</div>  
+  <div class="well well-lg">This is Large Well</div>  
+</div>
+
+
+
+Bootstrap Alert
+
+<div class="container">  
+  <h2>Alerts</h2>  
+  <div class="alert alert-success">  
+    <strong>Success!</strong> This alert box indicates a successful or positive action.  
+  </div>  
+  <div class="alert alert-info">  
+    <strong>Info!</strong> This alert box indicates a neutral informative change or action.  
+  </div>  
+  <div class="alert alert-warning">  
+    <strong>Warning!</strong> This alert box indicates a warning that might need attention.  
+  </div>  
+  <div class="alert alert-danger">  
+    <strong>Danger!</strong> This alert box indicates a dangerous or potentially negative action.  
+</div>  
+</div> 
+
+
+
+
+
+
+
+
+Bootstrap form
+
+Always use <form role="form"> (helps improve accessibility for people using screen readers)
+Wrap labels and form controls in <div class="form-group"> (needed for optimum spacing)
+Add class .form-control to all textual <input>, <textarea>, and <select> elements
+
+<div class="container">  
+  <h1>Vertical Form Example</h1>  
+  
+<form style="width:300px">  
+  <div class="form-group">  
+    <label for="exampleInputEmail1">Email address</label>  
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">  
+  </div>  
+  <div class="form-group">  
+    <label for="exampleInputPassword1">Password</label>  
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">  
+  </div>  
+    
+  <button type="submit" class="btn btn-default">Login</button>  
+</form>  
+  
+</div>  
+
+<div class="container">  
+  <h2>Inline form Example</h2>  
+  <form class="form-inline" role="form">  
+    <form style="width:300px">  
+  <div class="form-group">  
+    <label for="exampleInputEmail1">Email address</label>  
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">  
+  </div>  
+  <div class="form-group">  
+    <label for="exampleInputPassword1">Password</label>  
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">  
+  </div>  
+    
+  <button type="submit" class="btn btn-default">Login</button>  
+</form>  
+  
+</div>
+
+
+
+
+
+
+<div class="container">  
+  <h2>Inline form Example</h2>  
+  <form class="form-inline" role="form">  
+    <form style="width:300px">  
+  <div class="form-group">  
+    <label for="exampleInputEmail1">Email address</label>  
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">  
+  </div>  
+  <div class="form-group">  
+    <label for="exampleInputPassword1">Password</label>  
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">  
+  </div>  
+    
+  <button type="submit" class="btn btn-default">Login</button>  
+</form>  
+  
+</div>
+
+
+
+
+
+
+<div class="container">  
+  <h2>Horizontal form Example</h2>  
+  <form class="form-horizontal" role="form">  
+    <form style="width:300px">  
+  <div class="form-group">  
+      <label class="control-label col-sm-2" for="email">Email:</label>  
+      <div class="col-sm-10">  
+        <input type="email" class="form-control" id="email" placeholder="Enter email">  
+      </div>  
+    </div>  
+    <div class="form-group">  
+      <label class="control-label col-sm-2" for="pwd">Password:</label>  
+      <div class="col-sm-10">            
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password">  
+      </div>  
+    </div>  
+    
+  <div class="form-group">          
+      <div class="col-sm-offset-2 col-sm-10">  
+        <button type="submit" class="btn btn-default">Submit</button>  
+      </div>  
+    </div>  
+  </form>  
+</div>  
+Bootstrap table
+
+<div class="container">  
+  <h1>Basic Table Example</h1>  
+  
+<table class="table">  
+  <tr><th>Id</th><th>Name</th><th>Age</th></tr>  
+  <tr><td>101</td><td>Rahul</td><td>23</td></tr>  
+  <tr><td>102</td><td>Umesh</td><td>22</td></tr>  
+  <tr><td>103</td><td>Max</td><td>29</td></tr>  
+  <tr><td>104</td><td>Ajeet</td><td>21</td></tr>  
+</table>  
+
+ <h2>Striped Table Example</h2>  
+  // the default is hard to notice
+<table class="table table-striped">  
+  <tr><th>Id</th><th>Name</th><th>Age</th></tr>  
+  <tr><td>101</td><td>Rahul</td><td>23</td></tr>  
+  <tr><td>102</td><td>Umesh</td><td>22</td></tr>  
+  <tr><td>103</td><td>Max</td><td>29</td></tr>  
+  <tr><td>104</td><td>Ajeet</td><td>21</td></tr>  
+</table>  
+
+ <h1>Bordered Table Example</h1>  
+  
+<table class="table table-striped table-bordered">  
+  <tr><th>Id</th><th>Name</th><th>Age</th></tr>  
+  <tr><td>101</td><td>Rahul</td><td>23</td></tr>  
+  <tr><td>102</td><td>Umesh</td><td>22</td></tr>  
+  <tr><td>103</td><td>Max</td><td>29</td></tr>  
+  <tr><td>104</td><td>Ajeet</td><td>21</td></tr>  
+</table>  
+
+<h2>Hower rows Table Example</h2>  
+  
+<table class="table table-hover">  
+  <tr><th>Id</th><th>Name</th><th>Age</th></tr>  
+  <tr><td>101</td><td>Rahul</td><td>23</td></tr>  
+  <tr><td>102</td><td>Umesh</td><td>22</td></tr>  
+  <tr><td>103</td><td>Max</td><td>29</td></tr>  
+  <tr><td>104</td><td>Ajeet</td><td>21</td></tr>  
+</table>  
+
+<h1>Condensed Table Example</h1>  
+          //cuts cell pad in half
+<table class="table table-condensed">  
+  <tr><th>Id</th><th>Name</th><th>Age</th></tr>  
+  <tr><td>101</td><td>Rahul</td><td>23</td></tr>  
+  <tr><td>102</td><td>Umesh</td><td>22</td></tr>  
+  <tr><td>103</td><td>Max</td><td>29</td></tr>  
+  <tr><td>104</td><td>Ajeet</td><td>21</td></tr>  
+</table>  
+
+ <h2>Contextual classes</h2>  
+  
+<table class="table">  
+  <tr class="success"><th>It indicates a successful or positive action</th></tr>  
+  <tr class="active"><td>	It is used to apply the hover color to the table row or table cell</td></tr>  
+  <tr class="danger"><td>	It indicates a dangerous or potentially negative action</td></tr>  
+  <tr class="info"><td>	It indicates a neutral informative change or action</td></tr>  
+  <tr class="warning"><td>It specifies a warning that might need attention</td></tr>  
+</table> 
+
+  <h1>Contextual classes</h1>  
+<div class="table-responsive">  
+  //to make responsive tables
+<table class="table">  
+  <tr class="success"><th>Id</th><th>Name</th><th>Age</th></tr>  
+  <tr class="active"><td>101</td><td>Rahul</td><td>23</td></tr>  
+  <tr class="danger"><td>102</td><td>Umesh</td><td>22</td></tr>  
+  <tr class="info"><td>103</td><td>Max</td><td>29</td></tr>  
+  <tr class="warning"><td>104</td><td>Ajeet</td><td>21</td></tr>  
+</table>  
+</div>
+
+Bootstrap grid
+
+Create a row (<div class="row">).
+Add the number of columns, you want in the grid (tags with appropriate .col-*-* classes).
+Note that numbers in .col-*-* should always add up to 12 for each row.
+
+<div class="container">  
+  <h1>Grid Example</h1>  
+  
+  <h2> for equal rows </h2>
+<div class="row">  
+  <div class="col-md-3"style="background-color:lavender;">Rahul</div>  
+  <div class="col-md-3"style="background-color:lavenderblush;">Vijay</div>  
+  <div class="col-md-3"style="background-color:lavender;">Kartik</div>  
+  <div class="col-md-3"style="background-color:lavenderblush;">Ajeet</div>  
+</div>  
+
+    <h2>for unequal rows</h2>
+<div class="row" style = "font-size:30px">  
+  <div class="col-md-1"style="background-color:lavender;">Rahul</div>  
+  <div class="col-md-2"style="background-color:lavenderblush;">Vijay</div>  
+  <div class="col-md-4"style="background-color:lavender;">Kartik</div>  
+  <div class="col-md-5"style="background-color:lavenderblush;">Ajeet</div>  
+</div> 
+</div>
+
+Bootstrap button
+
+  <h1>Button Example!</h1>  
+  
+<button class="btn btn-default">default</button>  
+<button class="btn btn-primary">primary</button>  
+<button class="btn btn-danger">danger</button>  
+<button class="btn btn-success">success</button>  
+<button class="btn btn-info">info</button>  
+<button class="btn btn-warning">warning</button>  
+<button class="btn btn-link">Link</button>  
+
+<div class="container">  
+  <h2>Button Sizes</h2>  
+  <button type="button" class="btn btn-primary btn-lg">Large</button>  
+  <button type="button" class="btn btn-primary btn-md">Medium</button>      
+  <button type="button" class="btn btn-primary btn-sm">Small</button>  
+  <button type="button" class="btn btn-primary btn-xs">XSmall</button>  
+</div>  
+
+    <div class="container">  
+  <h2>Button States</h2>  
+  <button type="button" class="btn btn-primary">Primary Button</button>  
+  <button type="button" class="btn btn-primary active">Active Primary</button>  
+        <button type="button" class="btn btn-primary disabled"> Disabled Primary</button>  
+</div> 
+
+div class="container">  
+  <h2>Block Level Buttons</h2>  
+  <button type="button" class="btn btn-primary btn-block">Button 1</button>  
+  <button type="button" class="btn btn-default btn-block">Button 2</button>  
+  
+  <h2>Large Block Level Buttons</h2>  
+  <button type="button" class="btn btn-primary btn-lg btn-block">Button 1</button>  
+  <button type="button" class="btn btn-default btn-lg btn-block">Button 2</button>  
+  
+  <h2>Small Block Level Buttons</h2>  
+  <button type="button" class="btn btn-primary btn-sm btn-block">Button 1</button>  
+  <button type="button" class="btn btn-default btn-sm btn-block">Button 2</button>  
+</div> 
+
+
+Bootstrap Jumbotron
+
+  <div class="jumbotron">  
+    <h1>This is Jumbotron inside container!</h1>        
+    <p>Jumbotron specifies a big box for getting extra attention to some special content or information.</p>  
+  </div>
+  
+<div class="jumbotron">  
+  <h1>This is Jumbotron outside container!</h1>        
+  <p>Jumbotron specifies a big box for getting extra attention to some special content or information.</p>  
+</div>   
+
+  <div class="page-header">  
+    <h1>Example Page Header</h1>        
+  </div>  
+
+
+
+
+Bootstrap Contanier
+
+"is what it says"
+
+ <div class="container">  
+   <div class="row">  
+     <div class="col-md-xx"></div>  
+       here i am
+   </div>  
+   <div class="row">  
+     <div class="col-md-xx"></div>  
+       ...  
+   </div>  
+  </div>
+
+"basic contanier setup"
+
+<div class="container">    
+  <h1>Container</h1>    
+  <p>container content</p>  
+</div>    
+    
+<div class="container-fluid">    
+  <h1>Container-fluid</h1>    
+  <p>container-fluid content</p>  
+</div>
+
+"how to set up contaner and container-fluid: two container types"
+
+Bootstrap mobile friendly
+
+<html lang="en">    
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">  
+    
+</head>
+
+"what bootstrap uses to get going"
+
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+
+"for website on phones width is for any phone, inital scale is the zoom level"
+
+"dont use this messes up mobile site"
+a .min.css file is the same use as a .css file
+

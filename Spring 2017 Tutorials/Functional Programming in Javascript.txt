@@ -1,0 +1,270 @@
+so function variables in javascript expect the program to be a function
+
+
+1 
+.
+function(console) {
+	var names = ["Ben", "Jafar", "Matt", "Priya", "Brian"],
+		counter;
+
+	for(counter = 0; counter < names.length; counter++) {
+		console.log(names[counter]);
+	}
+}
+		
+		
+"Prints everything in the array"
+
+2.
+function(console) {
+	var names = ["Ben", "Jafar", "Matt", "Priya", "Brian"];
+
+	names.forEach(function(name) {
+		console.log(name);
+	});
+}
+
+
+"using for each to print everthing in the array"
+
+
+	newReleases.forEach(function(video) {
+		videoAndTitlePairs.push({ id: video.id, title: video.title });
+	});
+	
+"using projection
+a projection is applying a function to an array and using every value in one array to project to another array"
+
+
+
+Array.prototype.map = function(projectionFunction) {
+	var results = [];
+	this.forEach(function(itemInArray) {
+		results.push(projectionFunction());
+
+	});
+
+	return results;
+};
+
+  return newReleases.map(function(video) { 
+    return { id: video.id, title: video.title }; 
+  });
+
+"using the map function .map is a object function which makes projecting easier"
+
+
+	newReleases.forEach(function(video) {
+		if (video.rating === 5.0) {
+			videos.push(video);
+		}
+	});	
+	
+	
+Array.prototype.filter = function(predicateFunction) {
+	var results = [];
+	this.forEach(function(itemInArray) {
+	  if (predicateFunction(itemInArray)) {
+		results.push(itemInArray);
+	  }
+	});
+
+	return results;
+};
+
+return newReleases.
+		filter(function(video) {
+			return video.rating === 5.0;
+		}).
+		map(function(video) {
+			return video.id;
+		});
+
+"a way to filter yr array
+
+	movieLists.forEach(function(movieList) {
+		movieList.videos.forEach(function(video) {
+			allVideoIdsInMovieLists.push(video.id);
+		});
+	});
+	
+Array.prototype.concatAll = function() {
+	var results = [];
+	this.forEach(function(subArray) {
+		results.push.apply(results, subArray);
+	});
+
+	return results;
+};	
+
+Array.prototype.concatMap = function(projectionFunctionThatReturnsArray) {
+	return this.
+		map(function(item) {
+			return projectionFunctionThatReturnsArray(item);
+		}).
+		// apply the concatAll function to flatten the two-dimensional array
+		concatAll();
+};
+
+"concatAll function flattens trees, so you can retrieve desired values from them the function needs all arrays to be part of a subarray concatMap is used for bigger arrays"
+
+	return movieLists.
+	  map(function(movieList) {
+		return movieList.videos.map(function(video) {
+			return video.id;
+		  });
+	  }).
+	 concatAll();
+	 
+"projecting and mapping an tree"
+
+
+	boxarts.forEach(function(boxart) {
+		currentSize = boxart.width * boxart.height;
+		if (currentSize > maxSize) {
+			largestBoxart = boxart;
+			maxSize = currentSize;
+		}
+	});
+
+	return largestBoxart;
+}
+
+Array.prototype.reduce = function(combiner, initialValue) {
+	var counter,
+		accumulatedValue;
+
+	// If the array is empty, do nothing
+	if (this.length === 0) {
+		return this;
+	}
+	else {
+		// If the user didn't pass an initial value, use the first item.
+		if (arguments.length === 1) {
+			counter = 1;
+			accumulatedValue = this[0];
+		}
+		else if (arguments.length >= 2) {
+			counter = 0;
+			accumulatedValue = initialValue;
+		}
+		else {
+			throw "Invalid arguments.";
+		}
+
+		// Loop through the array, feeding the current value and the result of
+		// the previous computation back into the combiner function until
+		// we've exhausted the entire array and are left with only one function.
+		while(counter < this.length) {
+			accumulatedValue = combiner(accumulatedValue, this[counter])
+			counter++;
+		}
+
+		return [accumulatedValue];
+	}
+};
+
+function() {
+	var ratings = [2,3,1,4,5];
+
+	return ratings.
+	  reduce(function(acc, curr) {
+		if(acc > curr) {
+		  return acc;
+		}
+		else {
+		  return curr;
+		}
+	  });
+}
+
+	return boxarts.
+	  reduce(function(acc,curr) {
+		if (acc.width * acc.height > curr.width * curr.height) {
+		  return acc;
+		}
+		else {
+		  return curr;
+		}
+	  }).
+	  map(function(boxart) {
+		return boxart.url;
+	  });
+}
+		
+"finding desired values in arrays, known as reducing arrays"
+
+return videos.
+		reduce(function(accumulatedMap, video) {
+		var obj = {};
+		obj[video.id] = video.title;	
+		return Object.assign(accumulatedMap, obj);
+		},		
+		{});
+		
+		
+"formatting into different formats"
+
+	return movieLists.concatMap(function(movieList) {
+	  return movieList.videos.concatMap(function(video) {
+	    return video.boxarts.
+		  reduce(function(acc,curr) {
+			if (acc.width * acc.height < curr.width * curr.height) {
+			  return acc;
+			}
+			else {
+			  return curr;
+			}
+		  }).
+		  map(function(boxart) {
+			return {id: video.id, title: video.title, boxart: boxart.url};
+		  });
+	  });
+	});
+	
+	
+Retrieving the id, title, and smallest box art url for every video.
+
+	for(counter = 0; counter < Math.min(videos.length, bookmarks.length); counter++) {
+	  videoIdAndBookmarkIdPairs.push({videoId: videos[counter].title, bookmarkId: bookmarks[counter].id});
+	}
+	
+	
+Array.zip = function(left, right, combinerFunction) {
+	var counter,
+		results = [];
+
+	for(counter = 0; counter < Math.min(left.length, right.length); counter++) {
+		results.push(combinerFunction(left[counter],right[counter]));
+	}
+
+	return results;
+};
+
+	return Array.
+		zip(
+		  videos,
+		  bookmarks,
+		  function(video, bookmark) {
+			return {videoId: video.id, bookmarkId: bookmark.id};
+		  });
+
+"merging two arrays"
+
+	return lists.map(function(genre) {
+		return {
+			name: genre.name,
+			videos:
+				videos.
+					filter(function(video) {
+						return video.listId === .id;
+					}).
+					map(function(video) {
+						return {id: video.id, title: video.title};
+					})
+		};
+	});
+}
+
+"how to turn list back into trees, here the input is header field named generes, and  subfield named movies
+

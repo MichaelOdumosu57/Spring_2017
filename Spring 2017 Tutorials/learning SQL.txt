@@ -1,0 +1,85 @@
+https://www.w3schools.com/sql/
+learning SQL 
+
+SQL Select
+
+SELECT DISTINCT City FROM Customers;
+'selects only one column in the table
+
+SELECT column_name,column_name
+FROM table_name;
+'selects specific columns in the table'
+
+SELECT * FROM table_name;
+'selects everything in the table'
+
+SELECT * FROM Customers
+WHERE Country='Mexico';
+
+SELECT * FROM Customers
+WHERE CustomerID=1;
+
+SELECT * FROM Customers
+WHERE Country='Germany'
+AND City='Berlin';
+
+SELECT * FROM Customers
+WHERE City='Berlin'
+OR City='München';
+
+SELECT * FROM Customers
+WHERE Country='Germany'
+AND (City='Berlin' OR City='München');
+
+'selects everything with specified attributes indicated by WHERE 
+strings are enclosed by text quotes, numbers are not  
+AND, specifes both desired attributes OR specifies one desired attribute'
+
+=,	Equal
+<>,	Not equal. Note: In some versions of SQL this operator may be written as !=
+>,	Greater than
+<,	Less than
+>=,	Greater than or equal
+<=,	Less than or equal
+BETWEEN,	Between an inclusive range
+LIKE,	Search for a pattern
+IN,	To specify multiple possible values for a column
+
+
+SELECT column_name, column_name
+FROM table_name
+ORDER BY column_name ASC|DESC, column_name ASC|DESC;
+'ORDER default is ascending, first takes precedence over the second as in orders first attribute and sub-orders second not redoing the table'
+
+
+
+SQL Insert
+
+INSERT INTO table_name
+VALUES (value1,value2,value3,...);
+'inserts wherever'
+
+INSERT INTO table_name (column1,column2,column3,...)
+VALUES (value1,value2,value3,...);
+'specifes a new row to insert values'
+
+
+
+
+SQL Update
+
+UPDATE table_name
+SET [column_name] = [new_column_value], (same thing)...
+WHERE [column_name] = [column_value];
+'changes value indicated by set at row indicated by where for more columns use comma seperator WHERE will update all items with column_value removing the WHERE clause updates all records'
+
+
+SQL Delete
+
+DELETE FROM table_name
+WHERE [some_column]=[some_value] AND (same)...;
+'deletes all rows with [some_value] as value for [some_column] if you omit the WHERE clause you will delete everything but keeps the table, it deletes everything except the table object 
+use AND to specify what rows you want deleted'
+
+
+

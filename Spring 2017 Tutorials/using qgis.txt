@@ -1,0 +1,14 @@
+download qgis
+host: mars.availabs.org
+port: 5432 
+database: infogroup
+username: postgres
+pass: Jedi21funk
+refer to links that alex gave to you on the slack
+
+to get into postgress 
+sudo su postgres
+
+what happened w/ routes was it saw all the rest of the sql module.export (commands) were undefined so you had to rm from queries.js n index.js in route
+when writing the connection string in queries.js the format is:
+'[comp name]://[user]:[password]@[host]:[port]\ database

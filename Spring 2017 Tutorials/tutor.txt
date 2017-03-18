@@ -119,10 +119,10 @@ var mySetDate = myDate.setFullYear(2011, 9, 31); - create the object then change
 
 JavaScript strings
 length property;
-•toLowerCase()/toUpperCase();
-•match();
-•replace();
-•indexOf().
+ï¿½toLowerCase()/toUpperCase();
+ï¿½match();
+ï¿½replace();
+ï¿½indexOf().
 
 
 
@@ -162,7 +162,10 @@ onclick="alert('Going anywhere? Not so fast!'); return false;">
 
 
 
-
+CSS Zoom
+body {
+zoom: [percent value]%;
+}
 
 
 CSS selectors
@@ -269,7 +272,8 @@ h1 {
 	[border-stlye] dotted dashed solid
 			double groove
 			ridge inset outset
-	[border-color] rgb(x,y,z) (0-255 fr values), "color name #AAFFAA
+	[border-color] rgba(x,y,z,w) (0-255 fr values),-a is for dimness "color name #AAFFAA
+    [border-radius] 1px - 500px, from a square to a circle image
 margin:
 body {
 		margin-top: 100px;
@@ -311,8 +315,10 @@ a.whitewine {
 {fill:   #AABBCC;}
 	#ABC;}
 	color;}
-	rgb();}
+	rgba();}
 
+class = "[class_1];[class_2]; ....;"
+be careful
 
 
 
@@ -376,7 +382,7 @@ CSS irreg shapes
 stroke: #AABBCC;  //stroke = border
 	#ABC;
 	color;
-	rgb();
+	rgba();
 
 stroke-width: px;
 
@@ -387,7 +393,7 @@ stroke-linejoin: round;
 fill:   #AABBCC;
 	#ABC;
 	color;
-	rgb();
+	rgba();
 
 display : none
 
@@ -399,7 +405,7 @@ text-anchor: middle
 CSS Background	
 background-color: #FFCC66;
                   red;
-                  rgb(x,y,z);
+                  rgba(x,y,z);
 
 background-image: url("butterfly.gif");
 
@@ -419,6 +425,10 @@ background-position: right   bottom;
                       %         %         from top left
                       px        px         Where pixel is located on monitor
 
+background-size      cm        cm        from top left
+                      %         %         from top left
+                      px        px         from top left
+                      
 The list of order is as follows:
 [background-color] | [background-image] | [background-repeat] | [background-attachment] | [background-position]
 If a property is left out, it will automatically be set to its default value. 
@@ -427,7 +437,7 @@ For example, if background-attachment and background-position are taken out of t
 CSS color
 color: #ff0000;
         red;
-        rgb(x,y,z);
+        rgba(x,y,z,w); -a is for dimness
 
 CSS Files
 
@@ -512,5 +522,5 @@ HTML text
 <h1-7> <p>
 style = background-color: #ff0000 ;
                           red;
-                           rgb(x,y,z);
+                           rgba(x,y,z);
 

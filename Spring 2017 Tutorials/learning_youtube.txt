@@ -1,0 +1,14 @@
+this is how to make youtube videos run faster
+document.getElementsByTagName("video")[0].playbackRate = (.05-10)
+
+/*to download and embed video from youtube
+from:
+https://www.youtube.com/watch?v=9t7rwmMqUTM
+to
+https://www.youtube.com/embed/9t7rwmMqUTM
+did you see that
+
+for final stuff like this
+lB6K60mkmho&list=WL&index=12
+just cut off that extra stuff at the end
+*/
