@@ -1,0 +1,9 @@
+pauls mentorship
+
+make sure you validate every variable before it is received into a function
+
+if a program is not working, get all your cookies, (saved credentials ) if you can and uninstall and reinstall the program
+https://softwareengineering.stackexchange.com/questions/231057/exceptions-why-throw-early-why-catch-late
+
+demeter.availabs.org is mapped to an IP address, if its port 80 it will show the index.html webpage if its port 22 it will show the home file explorer
+

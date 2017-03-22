@@ -1,3 +1,10 @@
 chrome web store
 secure shell 
-install tmx
+
+learning ssh, when using ssh chrome os
+
+top bar hostname is the name of the sever
+username is your username used to log into the server
+hostname is the name of the server
+port # is usually 22
+fill those four forms then you can enter, the first form setups up using the other three forms

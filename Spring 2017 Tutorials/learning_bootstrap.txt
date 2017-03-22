@@ -1,4 +1,4 @@
-left off at http://www.javatpoint.com/bootstrap-badges-and-labels   
+left off at http://www.javatpoint.com/bootstrap-collapse   
 read the txt inside the tags :)
 //some reason html can hold only so much data before you need another page videos are especially tricky, make sure you send them to another page while using bootstrap
 
