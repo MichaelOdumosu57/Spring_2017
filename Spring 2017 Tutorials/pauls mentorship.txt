@@ -7,3 +7,11 @@ https://softwareengineering.stackexchange.com/questions/231057/exceptions-why-th
 
 demeter.availabs.org is mapped to an IP address, if its port 80 it will show the index.html webpage if its port 22 it will show the home file explorer
 
+if computer crashes because you are editing a website, fix buggy loops or else it will eat up your memory
+
+to test buggy loops run in in a containers(linux), soo you can crash it if its growing too much, unix called jails, 
+
+in chrome os opening crosh and typing in pop you can see how your cpu is being used, and see what exactly crashes your computer. when cpu usage gets high look to the far left to see the program crashing you computer then try to figure it out
+
+if you wanna see if your idea is already patented news.ycombinator.com
+flipboard.com

@@ -1,0 +1,34 @@
+spaces reference to each other, two spaces mean new topic
+---------------------------- to signfiy code blocks
+
+when telling another computer to make a database request its known as an xmlhttprequest, this is blocked to prevent hacking but to override this :
+
+
+node-postgres-promises is the express.js app
+
+
+when change CORS through express.js what you want to do is to find the app.js file in node-postgres-promises, if its not there do npm install
+
+then apply this code in there, var app is the express() app make sure that
+
+
+in console.log
+when you see a number glycophion that means how many times a number appears in  a row
+
+var express = require('express');
+var app = express();
+
+then apply this code apppropriately
+
+then npm install cors
+
+then add var cors = require('cors') [check if you need semi-colon later]
+then put app.use(cors()) under //view engine setup
+
+then npm restart if necessary
+
+then place this in index.html w/ adjustments
+d3.json([database], function(error, absent) {
+  if (error) return console.error(absent);
+
+})
