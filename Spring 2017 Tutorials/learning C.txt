@@ -1,0 +1,7 @@
+learning C
+
+cant throw functions inside main
+
+refer to http://web.ics.purdue.edu/~cs240/misc/errors.html
+
+if you need help p3.c is a comprehensive whole of how c works

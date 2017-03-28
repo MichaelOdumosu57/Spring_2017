@@ -14,7 +14,8 @@ Console.log(object);
 
 
 
-
+JavaScript ShadowDOM
+https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-101/
 
 Javascript Time
 make timers
@@ -61,6 +62,7 @@ Javascript DOM (Document Object)
 document.title;
 document.URL;
 document.lastModified;
+document.styleSheets; //returns list of all the stylesheets the page is using
 document.getElementsByTagName("li"); a list is made
 listElems[i].style.backgroundColor = "red";		
 listElems[i].style.color = "white";
@@ -86,6 +88,18 @@ loop arrays
 var colors = ["green", "red",]
 colors[1] = 'pick"
 array.sort()- sorts the array
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");
+array.indexOf(x), sees where x is in the program
+array.sort((function(a,b) {
+
+      return b - a;
+  });
+
+returns array in decreasing order, can also be used on
+objects
+make sure to use console log to know what you are doing
+
 
 Javascript Math
 Math.PI = value of pi
@@ -328,7 +342,17 @@ element : (unvisited)
 	   visited
 	   hover
            active
+td {  
 
+  opacity: 0.4;
+  transition: opacity 420ms ease-in-out;
+}
+td:hover {
+  opacity: 1;
+}
+
+
+//changes when you hover
 
 
 

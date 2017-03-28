@@ -1,0 +1,5 @@
+Quiz 2 is scheduled next week last 20 min of your lab section.  It has 12 question.
+
+Topics to be covered: strings (D&D 8.5), files (D&D 11), input/output (D&D 9.2), pointers (D&D 7), structures (D&D 10), bitwise operations (D&D 10) as much as was discussed in lectures 6-9.
+
+Closed books, closed notes.

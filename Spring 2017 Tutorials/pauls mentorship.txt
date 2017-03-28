@@ -15,3 +15,31 @@ in chrome os opening crosh and typing in pop you can see how your cpu is being u
 
 if you wanna see if your idea is already patented news.ycombinator.com
 flipboard.com
+
+bring your resume portfolio to writing department
+
+when working with javascript functions
+Object is an object Object.keys() is a function that returns an array
+array.reduce is an array in where if you want to find if a count equals a total use
+to pull a dictionary.value you set it equal to reduce(sum, k) like this
+var val = object(k)
+then 
+
+var _sum = Object.keys(types).reduce(function (sum, k) {
+  
+    var val = types[k]
+  
+    if (val) {
+      sum += val
+    }
+
+    return sum
+  }, 0)
+
+the zero is the second parameter in the reduce function that initalizes the sum to zero so you can get the proper answer
+when coding
+
+a. use a for loop when you can over functional programming
+b. use variables then the real nested represetation of yanking properties from an object (object dereferencing)
+so you can change the value instead of change all instances of object yanking
+c. the simpler you can make your code the better
