@@ -1,0 +1,129 @@
+learning leaflet
+left off
+http://leafletjs.com/examples/quick-start/
+
+use this for any additional questions
+http://leafletjs.com/reference-1.0.3.html
+
+to initalize a map By default map has mouse ,touch ,  zoom and attribution controls.
+
+var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+
+add a tile layer to the map get your url template at http://mapbox.com/
+you find it in account/api access tokens
+mine is
+pk.eyJ1IjoibWljaGFlbG9kdW1vc3U1NyIsImEiOiJjajB5Nzl6ODMwMmVlMzJwZXVqdmtlbGs1In0.YWZAMCT9m7su01RofBiQmQ
+
+
+there are four id's
+
+mapbox.mapbox-streets-v7
+mapbox.satellite
+mapbox.mapbox-traffic-v1
+mapbox.mapbox-terrain-v2
+
+
+to make a mapbox object
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: [your.mapbox.project.id],
+    accessToken: [your.mapbox.public.access.token]
+}).addTo(mymap);
+
+
+leaflet markers
+
+var marker = L.marker([51.5, -0.09]).addTo(mymap);
+
+
+leaflet circle
+
+var circle = L.circle([51.508, -0.11], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(mymap);
+
+
+leaflet polygon
+
+var polygon = L.polygon([
+    [51.509, -0.08],
+    [51.503, -0.06],
+    [51.51, -0.047]
+]).addTo(mymap);
+
+
+leaflet popups
+
+marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+circle.bindPopup("I am a circle.");
+polygon.bindPopup("I am a polygon.");
+
+openPopup(); only seems to work for one object at a time
+
+but if you click on the object a popup will show
+
+this is becuse of bindPopup([text])
+
+var popup = L.popup()
+    .setLatLng([51.5, -0.09])
+    .setContent("I am a standalone popup.")
+    .openOn(mymap);
+
+a standalone popup Here we use openOn instead of addTo because it handles automatic closing of a previously opened popup when opening a new one which is good for usability.
+
+function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
+
+mymap.on('click', onMapClick);
+
+gives you alert on what you did on map
+
+var events = L.popup();
+
+function onMapCheck(e) {
+    events
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(mymap);
+}
+
+mymap.on('click', onMapCheck);
+
+popup on what you did
+
+
+function plot (a) {
+
+var lats = []; var lngs = [];
+
+console.log(a.length)
+for (var i = 0; i < a.length; i++)  {
+    lats.push(a[i][1][1]);
+    lngs.push(a[i][1][0]);
+    // following not needed to calc bbox, just so you can see the points
+    L.marker([a[i][1][1], a[i][1][0]]).addTo(mymap);
+}
+
+// calc the min and max lng and lat
+var minlat = Math.min.apply(null, lats),
+    maxlat = Math.max.apply(null, lats);
+var minlng = Math.min.apply(null, lngs),
+    maxlng = Math.max.apply(null, lngs);
+
+// create a bounding rectangle that can be used in leaflet
+bbox = [[minlat,minlng],[maxlat,maxlng]];
+
+// add the bounding box to the map, and set the map extent to it
+L.rectangle(bbox).addTo(mymap);
+mymap.fitBounds(bbox);
+
+}
+
+use this for geoJSON objects, lats and lngs must receive coordinates number, the argument a was a conditioned array that held several plots and their NAICS names for a sorted geoJSON object

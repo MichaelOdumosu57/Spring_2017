@@ -1,7 +1,7 @@
 http://html.net/tutorials/css/lesson5.php
 LYNDA.COM/SMARTER
 
-Console 
+Console
 Console.log(object);
 
 "describes everything in the object, so you can find the right values
@@ -41,7 +41,7 @@ Javascript cookies
 escape() = make sure var name has no unallowed characters
 
 Set expiry day
-   var expiryDate = new Date();		
+   var expiryDate = new Date();
    expiryDate.setTime(expiryDate.getTime() + (60 * 1000));
 
 create a cookie
@@ -64,7 +64,7 @@ document.URL;
 document.lastModified;
 document.styleSheets; //returns list of all the stylesheets the page is using
 document.getElementsByTagName("li"); a list is made
-listElems[i].style.backgroundColor = "red";		
+listElems[i].style.backgroundColor = "red";
 listElems[i].style.color = "white";
 How to create new elements
    document.createElement("p");
@@ -76,7 +76,7 @@ to set an attribute
 		
 to delete elements
     var remove = document.getelementById()
-   document.body.removeChild();	 
+   document.body.removeChild();
 
 Javascript Arrays
 ways to make it
@@ -120,7 +120,7 @@ new Date(milliseconds).toLocaleDateString(); - gives date counting milliseconds 
 new Date("10 November, 2011").toLocaleDateString(); - you put in your own date
 //new Date(year, month, day, hours, minutes, seconds, milliseconds) - only year and month are req, others optional
 myDate.getDate()); - gets the number date
-myDate.getTime());-  gets the time in milliseconds from 1/1/1970 
+myDate.getTime());-  gets the time in milliseconds from 1/1/1970
 myDate.getFullYear()); - gets the current year
 myDate.getMonth()); - gets number representation of month (Jan - Dec 0-11)
 myDate.getDay()); - gets number representation of the day of the week (Sunday -Sat , 0-6)
@@ -190,7 +190,7 @@ CSS check
 not all browers agree when it comes to CSS
 go here to check
 http://jigsaw.w3.org/css-validator/
-CSS depth 
+CSS depth
 #id {
 	...
 	z-index: 1-as many pictures
@@ -226,7 +226,7 @@ Height
 Width
 
 height:
-width: 
+width:
 creates a box w/ dim for text
 
 CSS Float
@@ -246,14 +246,14 @@ put picture and text together
 float :left right
 clear left right, both none
 
-clear, 
+clear,
 <p class ="floatstop"> sdsag </p>
 for putting text under a picture
 
 
 CSS box model
 
-border: 
+border:
 
 p {
 		border-width: 1px;
@@ -338,11 +338,11 @@ be careful
 
 
 CSS links
-element : (unvisited) 
+element : (unvisited)
 	   visited
 	   hover
            active
-td {  
+td {
 
   opacity: 0.4;
   transition: opacity 420ms ease-in-out;
@@ -391,8 +391,8 @@ font-size: 30px;             absolute
            120%;             relative to zoom
            1em;
 
-font family: family-name, generic-family     desired font if not available uses fonts 
-                                             family which has fonts with similar 
+font family: family-name, generic-family     desired font if not available uses fonts
+                                             family which has fonts with similar
                                              features
                                               
              "family name"                   if a font name includes more than one word
@@ -426,7 +426,7 @@ fill-opacity: .1-1 // how dim text is
 text-anchor: middle
 
 
-CSS Background	
+CSS Background
 background-color: #FFCC66;
                   red;
                   rgba(x,y,z);
@@ -455,7 +455,7 @@ background-size      cm        cm        from top left
                       
 The list of order is as follows:
 [background-color] | [background-image] | [background-repeat] | [background-attachment] | [background-position]
-If a property is left out, it will automatically be set to its default value. 
+If a property is left out, it will automatically be set to its default value.
 For example, if background-attachment and background-position are taken out of the example:
 
 CSS color
@@ -500,13 +500,13 @@ border = "1" sets thickness
 width = "30%" sets table width relative to scrn
 <tr>         belongs in <td>
 <td>         belongs in <tr>
-align =      left 
-             middle 
+align =      left
+             middle
              right
 
 valign =    top
             center
-            bottom 
+            bottom
 colspan =   3 how many horizontal boxes a cell takes
 rowspan =   3 how many vertical boxes a cell takes
 
@@ -517,7 +517,7 @@ HTML images
 src =   " gif.jpg.png" opens image
         " folder/gif.jpg.png" - goes through folder
         " web.net/gif.jpg"  - gets it from website
-
+  
 alt =   if original image doesnot work
 
 width = '100px'   changes width and height of pictures
