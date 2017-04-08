@@ -1,0 +1,10 @@
+format
+[assigned reading title] [page or movie section] [*paragraph]
+[question ?????????????????????????????????]
+
+ex:
+txbt i hate this class, pg 53, paragraph 2
+My professor wants to give me an F in this class what do I do
+
+SUVSI, pg 91, paragraph 2
+What is meant by a mass society i still do not understand, is it just one cutlure

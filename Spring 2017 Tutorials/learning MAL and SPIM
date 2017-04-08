@@ -1,0 +1,7 @@
+learning MAL and SPIM
+
+type spim into ITS unix to get it going
+say load "[file].mal"
+say "run"
+then say "reinit" for spim to run a differnet program
+say quit in order to exit spim

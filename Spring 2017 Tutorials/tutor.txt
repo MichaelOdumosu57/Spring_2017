@@ -6,13 +6,25 @@ Console.log(object);
 
 "describes everything in the object, so you can find the right values
 
+Javascript window setting
+"window.scroll(400, 0)"
+puts the page at the preferred place for scrolling
 
 
 
+JavaScript CSS editing
+to retrieve text from an elemnt
+document.getElementById([id]).textContent
 
+to change the style of an object
 
+document.getElementById(id).style.property = "new style"
 
+when there is more than one element to change
 
+var change = document.getElementsByTagName("button")[index]
+
+remember give javascript an id for the object to refer to
 
 JavaScript ShadowDOM
 https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-101/
@@ -281,9 +293,9 @@ h1 {
 		border-left-width: thick;
 		border-left-style: solid;
 		border-left-color: orange;
-	
+	}
 	[border-width] 1px -10px, thin medium thick
-	[border-stlye] dotted dashed solid
+	[border-style] dotted dashed solid
 			double groove
 			ridge inset outset
 	[border-color] rgba(x,y,z,w) (0-255 fr values),-a is for dimness "color name #AAFFAA
@@ -367,13 +379,21 @@ text-align: right;           Like MS word
             justify;          Straigtens it out
 
 text-decoration: underline;
-	
+                 overline;
+                 line-through;
+                  blink;
+	               underline overline;
 
 text-transform:letter-spacing:text-decoration:text-align:text-indent:
 
 
 CSS font
 (not text)
+serif
+sans-serif
+cursive
+fantasy
+monospace
 font-style: italic;
             normal;
             oblique;
