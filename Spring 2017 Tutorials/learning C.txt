@@ -5,3 +5,10 @@ cant throw functions inside main
 refer to http://web.ics.purdue.edu/~cs240/misc/errors.html
 
 if you need help p3.c is a comprehensive whole of how c works
+
+to change an int to a string
+              int x = 1;
+              int length = snprintf( NULL, 0, "%d", x );
+              char* str = malloc( length + 1 );
+              snprintf( str, length + 1, "%d", x );
+              free(str);

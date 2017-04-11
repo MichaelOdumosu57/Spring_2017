@@ -1,5 +1,7 @@
 learning MAL and SPIM
 
+
+MAL stands for MIPS Assemlby Language
 type spim into ITS unix to get it going
 say load "[file].mal"
 say "run"
