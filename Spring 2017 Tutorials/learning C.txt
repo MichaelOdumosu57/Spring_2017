@@ -12,3 +12,100 @@ to change an int to a string
               char* str = malloc( length + 1 );
               snprintf( str, length + 1, "%d", x );
               free(str);
+
+
+you  always initalize structs outsife of main and end them with a semicolon
+
+
+for work w/ files
+
+    FILE* fin;
+
+    if ((fin = fopen([filename], [mode])) == NULL) {     //check statements for file handling
+        
+        printf("Could not open file %s for reading.\n", [filename]);
+        exit(1);
+        
+      }
+rmbr to close using
+        fclose(fin);
+
+
+to see if two string are equal
+
+strcmp("-las","-las")== 0) {
+
+}
+
+writing to a file
+        fputs([string], [fakefile]);
+
+
+
+rewinding a file to the beginning;
+        fseek([fakefile],0L, SEEK_SET);
+
+
+
+if you need a section of a string
+      char identifier[100][100];
+      char line[LEN] = "str: string #"
+      int o =0;
+      int op = 0;
+
+                while(line[o] != NULL ) {                     //algorithm used to find uses of identifer in code
+                    if (isspace(line[o]) != 0 && op == 0) {
+
+                        op = o;
+                    //printf("%d %d\n",o,op);
+                    }
+                    else if (line[o] == [common char or location where needed to stop]) {
+                        strncpy(identifier[x],line+op,o-op);
+                        break;
+                    }
+                    else {
+                      strncpy(identifier[x],line+op,o-op);
+                      //printf("%s",identifier);
+                    }
+                    o++;
+                }
+
+
+to get lines from a file
+      char line[LEN] = "str: string #"
+        while (fgets(line, MAXLEN, finput) != NULL)
+
+
+to see if a char location is not a space
+      isspace(line[0])  == 0)
+
+
+how to retrieve the first part of a string
+                  const char stop[2] =[break char];
+                  char * token;
+                  token = strtok(line,stop);
+   when there is no reference
+      
+      char * puller = line;
+      char section[k] = "\0";
+        while(puller[k] != ' '){
+        section[k] = puller[k];
+        k++;
+      }
+
+      section has your first word
+
+
+to retrieve the second part
+   
+                char * token = strchr(line,[point]);
+                              strstr(line,[point]);
+
+
+if you need to format
+                  int start = strlen([start_word]);
+                  while(start != [space_amount]){                   //loop that format the lines
+                      line[start] = ' ';
+                      start++;
+                  }
+

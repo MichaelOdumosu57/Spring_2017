@@ -4,3 +4,31 @@ git checkout UalbanyASIST/master -- ./members.html
 to received an update file that someone is working on
 
 .gitconfig file
+
+
+to make a copy of the master branch because git push thinks everything is up to date
+
+git checkout temp
+git branch temp
+push everything until you can figure out how to merge temp back to master
+
+
+if you need a file from a specific commit
+git checkout [commit from git log]
+git checkout [file(previous command tells you if file is inside commit)]
+
+
+pushing to a branch
+
+git push [remote_nickname(aka URL)] [branch]
+//but commits and branch need to match up
+
+
+I believe that git uses linked-list technologies so do not play around with if, or if you do do not use it on anyhting important, and do not take risks, problems might corrupt your account and if you do not know the full extent of what you are doing  see what happens anyway. Although highly suggest to watch a tutorial I was like this when I first started git and look where I am now
+
+
+to transfer ownership of a repository to an organiztion
+
+go to settings and transfer ownership it should be easy from there
+
+
