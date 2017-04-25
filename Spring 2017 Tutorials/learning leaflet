@@ -38,6 +38,16 @@ leaflet markers
 
 var marker = L.marker([51.5, -0.09]).addTo(mymap);
 
+custom marker
+
+    var myIcon = L.divIcon({
+        className:'current-location-icon',
+        html:'<div style="width:'+size+';height:'+size+';background-color:'+paint+';border-radius:500px;"> </div>',
+        iconAnchor:[0,0],
+        iconSize:null,
+        popupAnchor:[0,0]
+    });
+
 
 leaflet circle
 
@@ -126,4 +136,28 @@ mymap.fitBounds(bbox);
 
 }
 
-use this for geoJSON objects, lats and lngs must receive coordinates number, the argument a was a conditioned array that held several plots and their NAICS names for a sorted geoJSON object
+use this for geoJSON objects, lats and lngs must receive coordinates number, the argument a was a conditioned array that held several plots and their NAICS names for a sorted geoJSON object\
+
+Methods for modifying map state
+
+setZoom(<Number> zoom, <Zoom/pan options> options);
+Sets the zoom of the map.
+
+to remove things
+
+bounding box
+you have to have one before you can remove it
+
+var blocks = L.rectangle([[1,1],[1,1]]);
+function refresh_map() {
+ 
+  mymap.removeLayer(blocks);
+
+}
+
+remove markers
+given you placed the markers in an an array
+while (refresh.length != 0) {
+    mymap.removeLayer(refresh[0]);
+    refresh.splice(0,1);
+}

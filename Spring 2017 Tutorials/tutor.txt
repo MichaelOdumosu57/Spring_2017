@@ -18,7 +18,7 @@ document.getElementById([id]).textContent
 
 to change the style of an object
 
-document.getElementById(id).style.property = "new style"
+document.getElementById(id).style.[property] = "new style"
 
 when there is more than one element to change
 
@@ -111,7 +111,8 @@ array.sort((function(a,b) {
 returns array in decreasing order, can also be used on
 objects
 make sure to use console log to know what you are doing
-
+to delete elements
+array.splice([index],[amt to be removed]);
 
 Javascript Math
 Math.PI = value of pi
@@ -149,7 +150,7 @@ length property;
 �match();
 �replace();
 �indexOf().
-
+toString();            changes a number to a string
 
 
 

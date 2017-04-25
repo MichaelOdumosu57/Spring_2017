@@ -9,7 +9,7 @@ demeter.availabs.org is mapped to an IP address, if its port 80 it will show the
 
 if computer crashes because you are editing a website, fix buggy loops or else it will eat up your memory
 
-to test buggy loops run in in a containers(linux), soo you can crash it if its growing too much, unix called jails, 
+to test buggy loops run in in a containers(linux), soo you can crash it if its growing too much, unix called jails,
 
 in chrome os opening crosh and typing in pop you can see how your cpu is being used, and see what exactly crashes your computer. when cpu usage gets high look to the far left to see the program crashing you computer then try to figure it out
 
@@ -23,7 +23,7 @@ Object is an object Object.keys() is a function that returns an array
 array.reduce is an array in where if you want to find if a count equals a total use
 to pull a dictionary.value you set it equal to reduce(sum, k) like this
 var val = object(k)
-then 
+then
 
 var _sum = Object.keys(types).reduce(function (sum, k) {
   
@@ -43,3 +43,19 @@ a. use a for loop when you can over functional programming
 b. use variables then the real nested represetation of yanking properties from an object (object dereferencing)
 so you can change the value instead of change all instances of object yanking
 c. the simpler you can make your code the better
+
+javascript arrays
+put integers, then if you put a decimal its bad, let it know earlier what type will array use
+don't go downwards from an array count backwards
+
+
+tmux
+tmux allows you to run seperate sessions if your are ssh through a remote sever, or do not want to open up multiple terminals, or want to close a terminal to save space
+to do it you say
+tmux
+do what you want in the session , say run a database query
+to get out of the session [ctrl-b] [:]
+in the yellow highlight say detach
+to see your windows say tmux ls
+to go back into the session say tmux attach -t 0
+

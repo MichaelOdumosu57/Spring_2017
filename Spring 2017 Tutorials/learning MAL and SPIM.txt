@@ -7,3 +7,13 @@ say load "[file].mal"
 say "run"
 then say "reinit" for spim to run a differnet program
 say quit in order to exit spim
+
+examples he gives are basically the examples that you need
+
+
+arithmetic operations have the problem variables at the right side and the solution
+variables on the left side
+        when subtracting
+        sub $15, $15, $18
+        #f -= i.
+        f = f - i

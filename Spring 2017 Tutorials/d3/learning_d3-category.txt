@@ -1,0 +1,9 @@
+learning d3-category v3.0
+to get a custom color size
+        var shade= d3.scale.category10();
+        var shade= d3.scale.category20();
+        use either
+
+to get a single color
+
+    shade([index])
