@@ -1,6 +1,9 @@
 i opened /etc/sshd_confing and changed enable passowrd authentication to yes
+chmod to 777
 PermitEmptyPasswords yes
 ChallengeResponseAuthentication yes
 and removed the # sign from the front
 hope we do not have to refer to this
 back this up
+https://serverfault.com/questions/85992/how-do-i-setup-sshd-on-mac-os-x-to-only-allow-key-based-authentication
+would have chmod to 644 dont want things to break
