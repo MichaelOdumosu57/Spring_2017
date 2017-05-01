@@ -161,3 +161,12 @@ while (refresh.length != 0) {
     mymap.removeLayer(refresh[0]);
     refresh.splice(0,1);
 }
+
+
+to disable zoom
+mymap.touchZoom.disable();
+mymap.doubleClickZoom.disable();
+mymap.scrollWheelZoom.disable();
+mymap.boxZoom.disable();
+mymap.keyboard.disable();
+  var mymap = L.map('mapid', { zoomControl:false })

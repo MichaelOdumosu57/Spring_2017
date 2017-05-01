@@ -213,6 +213,10 @@ CSS depth
 <img id = "id" src "gif.jpg">
 
 CSS position
+
+overflow:auto
+overflow: hidden                          // prevents unecessary view
+
 #box4 {
 		position:absolute;
 		bottom: 50px;
@@ -295,7 +299,7 @@ h1 {
 		border-left-style: solid;
 		border-left-color: orange;
 	}
-	[border-width] 1px -10px, thin medium thick
+	[border-width] 1px - 10px, thin medium thick
 	[border-style] dotted dashed solid
 			double groove
 			ridge inset outset

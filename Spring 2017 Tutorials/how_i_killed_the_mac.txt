@@ -1,0 +1,6 @@
+i opened /etc/sshd_confing and changed enable passowrd authentication to yes
+PermitEmptyPasswords yes
+ChallengeResponseAuthentication yes
+and removed the # sign from the front
+hope we do not have to refer to this
+back this up

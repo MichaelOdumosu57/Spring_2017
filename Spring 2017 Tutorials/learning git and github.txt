@@ -32,3 +32,25 @@ to transfer ownership of a repository to an organiztion
 go to settings and transfer ownership it should be easy from there
 
 
+
+Git branches
+
+git branch
+see all curent branches
+
+git branch [name]
+make a new branch
+
+git branch -d [branch]
+deletes a branch
+
+git branch -D [branch]
+force deletes a branch
+
+git branch -m <branch>
+rename the current branch
+
+git checkout
+    git checkout [existing-branch]
+
+git clone makes a new folder in your directory not the one you want it to be

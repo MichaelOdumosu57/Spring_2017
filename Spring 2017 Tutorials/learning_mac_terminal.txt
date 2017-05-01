@@ -1,0 +1,4 @@
+learning mac terminal
+
+lot like unix
+say command , makes the machine talk
