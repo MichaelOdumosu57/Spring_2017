@@ -59,3 +59,4 @@ in the yellow highlight say detach
 to see your windows say tmux ls
 to go back into the session say tmux attach -t 0
 
+look up MIT stuff that they do and make sure that you can do them as well
